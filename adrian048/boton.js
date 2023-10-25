@@ -1,3 +1,5 @@
+//js para el cambio de tema claro-oscuro 
+
 let checkbox = document.getElementById('toggleTheme');
 let body = document.getElementsByTagName('body');
 

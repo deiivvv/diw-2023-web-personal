@@ -1,3 +1,5 @@
+//js para los sliders
+
 let currentSlide = 0;
 
 function changeSlide(n) {

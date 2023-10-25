@@ -1,9 +1,11 @@
+//Establecemos colores claros
 $color-1-claro: #ffffff;
 $color-2-claro: #B6FFFA;
 $color-3-claro: #98E4FF;
 $color-4-claro: #80B3FF;
-$color-5-claro: #687EFF;
+$color-5-claro: #788af3;
 
+//Establecemos colores oscuros
 $colores-oscuros : (
   #000000,
   #5C8374,
@@ -13,6 +15,7 @@ $colores-oscuros : (
   
 );
 
+//Cambio de gama de colores
 :root{
     .tema-claro{
         --color-1: #{$color-1-claro};

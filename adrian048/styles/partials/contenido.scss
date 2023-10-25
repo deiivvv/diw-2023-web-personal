@@ -4,20 +4,22 @@
     text-align: center;
     margin: 7%;
 }
+
+/*Antes tenia el scss de la foto asi, pero lo cambio para inluir anidamiento
 .foto{
     margin: 0;
     height: 100%;
     float: left;
     width: 39%;
 }
-.dato{
+*/
+.datos h1{
     margin: 0;
-    background-color: var(--color-2);
-    margin: 1%;
+    height: 100%;
     float: left;
-    width: 28.5%;
-    max-width: 28.5%;
+    width: 39%;
 }
+
 
 
 .slider-container {
@@ -87,6 +89,8 @@ button {
     border: none;
     background-color: #bebebe;
     color: #000000;
+    border-radius: 50%;
+    //@include border-radius-buttons(10px);
 }
 
 .prev {
@@ -96,3 +100,45 @@ button {
 .next {
     right: 10px;
 }
+
+
+
+@function calcular-tamano-h2($padding, $max-height) {
+  $font-size: 16px; // Tamaño de fuente inicial
+  $max-font-size: 24px; // Tamaño de fuente máximo
+
+  // Ajusta el tamaño de fuente en función del padding
+  $font-size: $font-size + $padding / 15; // Puedes ajustar el valor según tus necesidades
+
+  // Ajusta el tamaño de fuente en función de la altura máxima
+  $font-size: min($font-size, $max-font-size);
+
+  @return $font-size;
+}
+
+@function calcular-tamano-h2($padding, $max-height) {
+    $font-size: 16px; // Tamaño de fuente inicial
+    $max-font-size: 24px; // Tamaño de fuente máximo
+  
+    // Ajusta el tamaño de fuente en función del padding
+    $font-size: $font-size + ($padding / 15); // Ajusta el valor según tus necesidades
+  
+    // Ajusta el tamaño de fuente en función de la altura máxima
+    $font-size: min($font-size, $max-font-size);
+  
+    @return $font-size;
+  }
+  
+  .dato {
+    margin: 0;
+    background-color: var(--color-2);
+    margin: 1%;
+    float: left;
+    width: 28.5%;
+    max-width: 28.5%;
+  
+    h2 {
+      font-size: calcular-tamano-h2(45px, 117px);
+    }
+  }
+  

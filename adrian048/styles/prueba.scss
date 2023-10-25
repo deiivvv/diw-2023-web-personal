@@ -1,0 +1,69 @@
+//Este archivo se usó para probar otras cosas :)
+
+//Prueba 1
+    //pregunta
+    .color-red {
+        background-color: red;
+    }
+    .color-blue {
+        background-color: blue;
+    }
+    .color-green {
+        background-color: green;
+    }
+
+    //solucion
+    $colores: red blue green;
+
+    .colores {
+        @each $color in $colores {
+            .color-#{$color} { 
+                background-color: #{$color};            
+            }
+        }
+    }
+
+
+//Prueba2
+    //pregunta
+    icon-facebook {
+        background-image: url('./imagenes/facebook.png');
+    }
+    .icon-twitter {
+        background-image: url('./imagenes/twitter.png');
+    }
+    .icon-instagram {
+        background-image: url('./imagenes/instagram.png');
+    }
+
+    //solucion
+    $iconos: facebook twitter instagram;
+
+    .iconos {
+        @each $icono in $iconos {
+            .icon-#{$icono} { 
+                background-image: url('./imagenes/#{$icono}.png');
+            }
+        }
+    }
+
+
+//Prueba3
+    //pregunta
+    $fuentes: (
+        encabezado:Arial, sans-serif,
+        parrafo: 'Helvetica Neue', sans-serif,
+        enlace: 'Times New Roman', serif
+    );
+
+    //solucion
+    .encabezado{
+        font-family: Arial, sans-serif;
+    }
+
+    .parrafo{
+        font-family: 'Helvetica Neue', sans-serif;
+    }
+    .enlace{
+        font-family: 'Times New Roman', serif;
+    }
