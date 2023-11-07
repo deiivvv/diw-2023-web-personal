@@ -1,14 +1,15 @@
 .menu {
     display: inline-block;
-    width: 33%;
   }
   
   header {
+    background-color: #ccc;
     width: 100%;
-    height: auto;
+    height: 100 px;
     top: 0px;
     position: sticky;
     z-index: 10;
+    text-align: center;
     display: inline-block;
   }
   
@@ -23,3 +24,24 @@
     position: relative;
   }
   
+  /*mapa*/
+  .c_foto{
+    width: map-get($tamanios-iconos-horizontal , 'pequenio' );
+    margin: 3%;
+  }
+
+  
+.p_obras{
+  text-align: center;
+
+  /*Funtion IF - DEBUG*/
+  img {
+    width: 50%;
+    @if $debug == false {
+      display: none;
+    }@else{
+      display: inline;
+
+    }
+  } 
+}

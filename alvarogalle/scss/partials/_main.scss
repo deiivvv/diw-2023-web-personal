@@ -38,61 +38,67 @@
     z-index: 1;
 }
 
+
+.slide > img {
+    width: map-get($tamanios-iconos-horizontal, 'medio' )
+}
+
 /*////////////////////////////////////////////////////*/
+
+$separacion: 10px;
 
 .c_desplegable {
     width: 80%;
-    margin: 0 auto;
+    margin-top: 3%; 
+    background-color: var(--color-4);
 }
+
+
 
 .tarjeta {
     border: 1px solid #ccc;
-    margin-bottom: 10px;
+    box-shadow: 10px 5px 5px black;
+    margin-bottom: #{$separacion};
 }
 
 .cabecera {
+    // text-align: center;
     background-color: #f2f2f2;
-    padding: 10px;
+    padding: $separacion;
     cursor: pointer;
 }
 
 .contenido {
     display: none;
-    padding: 10px;
+    padding: $separacion;
+
+    /*Anidacion*/
+    p{
+        color: var(--color-letra);
+    }
+}
+
+#contenido_3{
+    text-align: center;
+    column-count: 4;
+}
+
+/*mapa*/
+.contenido > div > img{
+    width: map-get($tamanios-iconos-horizontal , 'medio');
 }
 
 
 
-/*////////////////////////////////////////////////////*/
+/*////////////INTERPOLACION////////////////////////////////////////*/
+$c: #ccc;
+$selector: body;
 
-body{
-    background-image: url(Windows_10_Cloud_Hero.jpg);
+#{$selector}{
+    background-color: $c;
+    margin-left: 10%;
+    margin-right: 10%;
 }
-
-// .menu{
-//     display: inline-block;
-//     width: 33%;
-// }
-// header{
-//     width: 100%;
-//     height: auto;
-//     top: 0px;
-//     position: sticky;
-//     z-index: 10;
-//     display: inline-block;
-
-// }
-
-// h1{
-//     background-color: green;
-//     border-radius: 100px;
-//     /* top: 5%; */
-//     width: 30%;
-//     height: auto;
-//     text-align: center;
-//     position: relative;
-// }
-
 
 main{
     padding-top: 3%;
@@ -107,17 +113,25 @@ section{
     width: 80%;
 }
 
+
+
+/*////////////MIXIN////////////////////////////////////////*/
+@mixin bordes($estilo, $color){
+    border: 3px $estilo $color;
+    text-align: center;
+}
+  
 article{
     background-color: var(--color-2);
     text-align: center;
     height: auto;
-    border: 3px solid #000;
-}
+    
+    @include bordes(solid, #000 );
 
-
-.c_desplegable{
-    margin-top: 3%; 
-    background-color: var(--color-4);
+    /*Anidacion*/
+    p{
+        color: var(--color-letra);
+    }
 }
 
 
