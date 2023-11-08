@@ -6,27 +6,40 @@
     position: fixed;
     bottom: 0%;
     text-align: center;
-    padding-top: 1.25%;
+    padding-top: 1.20%;
     padding-bottom: 1.25%;
-    z-index: 3;
+    z-index: 10;
 
-    #idRedes {
+    //USO DEL EACH ICONOS REDES SOCIALES
+    $redes-sociales: correo llamar linkedin github;
+
+    .redes-sociales {
         position: relative;
-
+        height: 70%;
+        margin-bottom: 15px;
         a {
             display: inline-block;
             width: 7%;
 
-            img {
-                width: map-get($tamanios-iconos-horizontal , 'pequenio');
-                height: map-get($tamanios-iconos-vertical , 'pequenio');
+            @each $red in $redes-sociales {
+                .icono-#{$red} {
+                    background-image: url("../iconos/#{$red}.png");
+                    background-size: 100%;
+                    width: map-get($tamanios-iconos-horizontal , 'pequenio');
+                    height: 63px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
             }
         }
     }
 
     cite {
-        top: 10%;
-        font-size: small;
         position: relative;
+        top: 10%;
+        height: 30%;
+        font-size: normal;
+        
+       
     }
 }
