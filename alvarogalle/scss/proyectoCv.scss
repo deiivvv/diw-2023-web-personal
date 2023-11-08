@@ -14,10 +14,10 @@ html {
     box-sizing: inherit;
 }
 
-/*////////////////////////////////////////////////////*/
+/*/////////////LISTAS DE COLORES - MODO NOCHE///////////////////////////////////////*/
 
 $color-1-claro: #AD8B73;
-$color-2-claro: #8000FF;
+$color-2-claro: #ad7395;
 $color-3-claro: #f2f2f2;
 $color-4-claro: #CEAB93;
 $color-5-claro: #AD8B73;
@@ -53,15 +53,25 @@ $colores-oscuros : (
   }
 } 
 
-/*////////////////////////////////////////////////////*/
+/*/////////////////////MAPA DE TAMAÑOS///////////////////////////////*/
 
 $tamanios-iconos-horizontal : (
- 'pequenio':20%, 
- 'medio':40%,
- 'grande':60%
+ 'pequenio':5%, 
+ 'medio':15%,
+ 'grande':50%
 );
+
+
+/*/////////////////////FUNCIONES///////////////////////////////*/
+@function anchura($column, $total){
+  @return percentage($column/ $total);
+}
+
+/*MODO DEBUG - MAIN.scss*/
+$debug: false;
 
 
 @import "./partials/menu";
 @import "./partials/footer";
 @import "./partials/main";
+

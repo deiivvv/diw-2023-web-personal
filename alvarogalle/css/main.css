@@ -1,26 +1,24 @@
+@charset "UTF-8";
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 *,
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
-/*////////////////////////////////////////////////////*/
+/*/////////////LISTAS DE COLORES - MODO NOCHE///////////////////////////////////////*/
 :root .tema-claro {
   --color-1: #AD8B73;
-  --color-2: #8000FF;
+  --color-2: #ad7395;
   --color-3: #f2f2f2;
   --color-4: #CEAB93;
   --color-5: #AD8B73;
-  --color-letra: #000000;
-}
+  --color-letra: #000000; }
 :root .tema-oscuro {
   --color-1: #222831;
   --color-2: #34495E;
@@ -28,23 +26,23 @@ html {
   --color-4: #393E46;
   --color-5: #222831;
   --color-5: #222831;
-  --color-letra: #FFFFFF;
-}
+  --color-letra: #FFFFFF; }
 
-/*////////////////////////////////////////////////////*/
+/*/////////////////////MAPA DE TAMAÑOS///////////////////////////////*/
+/*/////////////////////FUNCIONES///////////////////////////////*/
+/*MODO DEBUG - MAIN.scss*/
 .menu {
-  display: inline-block;
-  width: 33%;
-}
+  display: inline-block; }
 
 header {
+  background-color: #ccc;
   width: 100%;
-  height: auto;
+  height: 100 px;
   top: 0px;
   position: sticky;
   z-index: 10;
-  display: inline-block;
-}
+  text-align: center;
+  display: inline-block; }
 
 h1 {
   background-color: var(--color-1);
@@ -54,49 +52,75 @@ h1 {
   width: 30%;
   height: auto;
   text-align: center;
-  position: relative;
-}
+  position: relative; }
+
+/*mapa*/
+.c_foto {
+  width: 5%;
+  margin: 3%; }
+
+.p_obras {
+  text-align: center;
+  /*Funtion IF - DEBUG*/ }
+  .p_obras img {
+    width: 50%;
+    display: none; }
 
 ul {
   background-color: var(--color-5);
-  width: 100%;
-}
+  width: 100%; }
 
 li {
   text-align: center;
   margin-left: 2%;
+  /*function*/
   width: 14%;
-  display: inline-block;
-}
-
-img {
-  width: 40%;
-}
+  display: inline-block; }
 
 footer {
   width: 100%;
-  height: 100;
-  position: relative;
-  background-color: blue;
-}
+  position: relative; }
+
+/*Estructuras - EACH*/
+.contacto-facebook {
+  width: 15%; }
+
+.contacto-twitter {
+  width: 15%; }
+
+.contacto-linkedin {
+  width: 15%; }
+
+.contacto-telefono {
+  width: 15%; }
+
+.contacto-gmail {
+  width: 15%; }
+
+.contacto-x {
+  width: 15%; }
+
+.contacto-instagram {
+  width: 15%; }
+
+.contacto-github {
+  width: 15%; }
 
 /*////////////////////////////////////////////////////*/
 .slider-container {
   overflow: hidden;
   width: 80%;
-  margin: 0 auto; /* Centra el carrusel horizontalmente */
-  position: relative;
-}
+  margin: 0 auto;
+  /* Centra el carrusel horizontalmente */
+  position: relative; }
 
 .slider {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-}
+  transition: transform 0.5s ease-in-out; }
 
 .slide {
   flex: 0 0 100%;
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 .nav-buttons {
   width: 20%;
@@ -107,68 +131,75 @@ footer {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
-}
+  right: 0; }
 
 #id_btn {
-  text-align: center;
-}
+  text-align: center; }
 
 .prev,
 .next {
   margin: 10px;
-  z-index: 1;
-}
+  z-index: 1; }
+
+.slide > img {
+  width: 15%; }
 
 /*////////////////////////////////////////////////////*/
 .c_desplegable {
   width: 80%;
-  margin: 0 auto;
-}
+  margin-top: 3%;
+  background-color: var(--color-4); }
 
 .tarjeta {
   border: 1px solid #ccc;
-  margin-bottom: 10px;
-}
+  box-shadow: 10px 5px 5px black;
+  margin-bottom: 10px; }
 
 .cabecera {
   background-color: #f2f2f2;
   padding: 10px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .contenido {
   display: none;
   padding: 10px;
-}
+  /*Anidacion*/ }
+  .contenido p {
+    color: var(--color-letra); }
 
-/*////////////////////////////////////////////////////*/
+#contenido_3 {
+  text-align: center;
+  column-count: 4; }
+
+/*mapa*/
+.contenido > div > img {
+  width: 15%; }
+
+/*////////////INTERPOLACION////////////////////////////////////////*/
 body {
-  background-image: url(Windows_10_Cloud_Hero.jpg);
-}
+  background-color: #ccc;
+  margin-left: 10%;
+  margin-right: 10%; }
 
 main {
   padding-top: 3%;
   padding-bottom: 3%;
   width: 100%;
-  height: auto;
-}
+  height: auto; }
 
 section {
   margin-left: 10%;
-  width: 80%;
-}
+  width: 80%; }
 
+/*////////////MIXIN////////////////////////////////////////*/
 article {
   background-color: var(--color-2);
   text-align: center;
   height: auto;
   border: 3px solid #000;
-}
-
-.c_desplegable {
-  margin-top: 3%;
-  background-color: var(--color-4);
-}
+  text-align: center;
+  /*Anidacion*/ }
+  article p {
+    color: var(--color-letra); }
 
 /*# sourceMappingURL=main.css.map */
