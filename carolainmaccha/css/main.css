@@ -1,17 +1,24 @@
+@charset "UTF-8";
 /*MODO DEBUG*/
 :root .tema-claro {
-  --color-1: #C1AAF2;
-  --color-2: #A9D6FF;
-  --color-3: #8e2ebb;
+  --color-1: #D8B4F8;
+  --color-2: #CAEDFF;
+  --color-3: #803cc5;
   --color-4: white;
-  --color-5: #fdbaec;
+  --color-5: #FFC7EA;
 }
 :root .tema-oscuro {
-  --color-1: rgb(110, 46, 145);
-  --color-2: #3f668b;
-  --color-3: rgba(228, 207, 241, 0.849);
+  --color-1: #6f2b9e;
+  --color-2: #405a74;
+  --color-3: #e4dafa;
   --color-4: #8c64a7;
   --color-5: #f5caea;
+}
+:root .con-sombra {
+  --sombreado:3px 10px 57px lightgray;
+}
+:root .sin-sombra {
+  --sombreado:none;
 }
 
 input {
@@ -23,8 +30,9 @@ input {
 .switch-5 {
   position: relative;
   display: inline-block;
-  width: 65px;
-  height: 31px;
+  width: 70px;
+  height: 34px;
+  top: -10px;
 }
 
 .slider-5 {
@@ -44,7 +52,7 @@ input {
   font-family: "Font Awesome 5 Free";
   content: "\f0eb";
   position: absolute;
-  top: 1px;
+  top: 3px;
   left: 15px;
   font-size: 20px;
   transition: 0.3s ease all;
@@ -54,7 +62,7 @@ input {
 input:checked + .slider-5:before {
   transform: translate(20px) rotate(360deg);
   content: "\f186";
-  color: white;
+  color: var(--color-4);
 }
 
 input:checked + .slider-5 {
@@ -62,6 +70,10 @@ input:checked + .slider-5 {
   left: 0px;
 }
 
+@font-face {
+  font-family: "glamorous";
+  src: url("../letra/glamorous.otf");
+}
 #menu {
   background-color: var(--color-1);
   width: 100%;
@@ -85,9 +97,9 @@ input:checked + .slider-5 {
   width: 20%;
   text-decoration: none;
   font-style: italic;
-  font-size: large;
+  font-size: 25px;
   color: var(--color-3);
-  font-weight: bolder;
+  font-family: "glamorous";
 }
 #menu nav a:hover {
   color: var(--color-4);
@@ -96,151 +108,306 @@ input:checked + .slider-5 {
 }
 
 @font-face {
-  font-family: "Vogue";
-  src: url(letra/Vogue.ttf);
+  font-family: "glamorous";
+  src: url("../letra/glamorous.otf");
 }
-#contenido {
+@font-face {
+  font-family: "robotoR";
+  src: url("../letra/Roboto-Light.ttf");
+}
+.enConstruccion img {
+  width: 60%;
+  margin-left: 20%;
+  display: none;
+}
+
+/*--------------------CONTENIDO-----------------------------*/
+#idContenido {
   background-color: var(--color-4);
   position: relative;
-  height: 1500px;
+  height: 1450px;
+  padding-top: 2%;
+  font-family: "robotoR";
+  /*-------------------CAJA IZQUIERDA-----------------*/
+  /*-----------------CAJAS DERECHAS---------------*/
 }
-
-#cajaIzquierda {
+#idContenido #cajaIzquierda {
   float: left;
   width: 20%;
-  margin-left: 5%;
   height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  /*-----------IMAGEN CIRCULO-----------------*/
+  /*------------CAJA DATOS IZQUIERDA----------*/
 }
-#cajaIzquierda img {
+#idContenido #cajaIzquierda img {
+  width: 50%;
+  height: 17%;
+  border-radius: 90%;
   position: relative;
-  left: 35%;
   top: 1%;
-  width: 45%;
-  height: 15%;
+  left: 25%;
   z-index: 2;
-  border-radius: 80%;
   border: 2px solid var(--color-3);
 }
-#cajaIzquierda #contenedorLateral {
+#idContenido #cajaIzquierda #contenedorLateral {
   position: relative;
-  left: 10%;
-  height: 70%;
-  width: 95%;
-  top: -6%;
+  top: -8%;
+  padding-top: 30%;
+  padding-left: 15%;
+  padding-right: 15%;
   background-color: var(--color-1);
   border: 1px solid black;
-  box-shadow: 0px 1px 7px lightgray;
-  padding-top: 30%;
-  padding-left: 5%;
+  box-shadow: var(--sombreado);
+  width: 95%;
+  font-size: 20px;
+  /*-------BLOQUES----------*/
 }
-#cajaIzquierda #contenedorLateral div {
+#idContenido #cajaIzquierda #contenedorLateral div {
   margin-top: 5%;
+  margin-bottom: 5%;
 }
-#cajaIzquierda #contenedorLateral div h7 {
+#idContenido #cajaIzquierda #contenedorLateral div h7 {
+  color: black;
+  font-family: "glamorous";
   font-weight: bold;
-  margin-left: 10%;
 }
-#cajaIzquierda #contenedorLateral #tituloPrincipal {
+#idContenido #cajaIzquierda #contenedorLateral #idTituloPrincipal {
   text-align: center;
 }
-#cajaIzquierda #contenedorLateral #tituloPrincipal h2 {
+#idContenido #cajaIzquierda #contenedorLateral #idTituloPrincipal h1 {
   color: var(--color-3);
+  font-family: "glamorous";
+  font-weight: bold;
   text-shadow: 0px 2px 3px gray;
+  margin-bottom: 5px;
 }
-#cajaIzquierda #contenedorLateral #TablaDatosLateral td {
-  padding-left: 15%;
+#idContenido #cajaIzquierda #contenedorLateral #idDatos div {
+  float: left;
+  width: 50%;
 }
-#cajaIzquierda #contenedorLateral #idLenguajes {
-  width: 90%;
-  text-align: left;
-  margin-left: 15%;
-  margin-top: 2%;
+#idContenido #cajaIzquierda #contenedorLateral #idDatos div + div {
+  padding-left: 30px;
 }
-#cajaIzquierda #contenedorLateral #idLenguajes td > div {
-  margin-left: 5%;
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div {
+  float: left;
+  width: 50%;
 }
-#cajaIzquierda #contenedorLateral #cajaSkills {
-  display: flex;
-  justify-content: center;
-  width: 80%;
-  flex-wrap: wrap;
-  margin-bottom: 15%;
-  margin-top: 5%;
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div {
+  padding-left: 30px;
 }
-#cajaIzquierda #contenedorLateral #cajaSkills .circle-wrap {
-  margin-left: 9%;
-  width: 24%;
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso {
+  height: 10px;
+  width: 100px;
+  margin-top: 7%;
+  padding-left: 0%;
+  background-color: var(--color-4);
+  border-radius: 80px;
 }
-#cajaIzquierda #contenedorLateral #botonCV {
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso .nivel-100 {
+  width: 100%;
+  height: 10px;
+  margin-top: 0%;
   background-color: var(--color-3);
-  width: 70%;
-  height: 7%;
-  margin-top: 10%;
-  margin-left: 15%;
-  border-color: transparent;
-  box-shadow: 1px 2px 3px black;
+  border-radius: 80px;
 }
-#cajaIzquierda #contenedorLateral #botonCV a {
-  color: black;
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso .nivel-90 {
+  width: 90%;
+  height: 10px;
+  margin-top: 0%;
+  background-color: var(--color-3);
+  border-radius: 80px;
+}
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso .nivel-80 {
+  width: 80%;
+  height: 10px;
+  margin-top: 0%;
+  background-color: var(--color-3);
+  border-radius: 80px;
+}
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso .nivel-70 {
+  width: 70%;
+  height: 10px;
+  margin-top: 0%;
+  background-color: var(--color-3);
+  border-radius: 80px;
+}
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso .nivel-60 {
+  width: 60%;
+  height: 10px;
+  margin-top: 0%;
+  background-color: var(--color-3);
+  border-radius: 80px;
+}
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso .nivel-50 {
+  width: 50%;
+  height: 10px;
+  margin-top: 0%;
+  background-color: var(--color-3);
+  border-radius: 80px;
+}
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso .nivel-40 {
+  width: 40%;
+  height: 10px;
+  margin-top: 0%;
+  background-color: var(--color-3);
+  border-radius: 80px;
+}
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso .nivel-30 {
+  width: 30%;
+  height: 10px;
+  margin-top: 0%;
+  background-color: var(--color-3);
+  border-radius: 80px;
+}
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso .nivel-20 {
+  width: 20%;
+  height: 10px;
+  margin-top: 0%;
+  background-color: var(--color-3);
+  border-radius: 80px;
+}
+#idContenido #cajaIzquierda #contenedorLateral #idLenguajes div + div .barra-progreso .nivel-10 {
+  width: 10%;
+  height: 10px;
+  margin-top: 0%;
+  background-color: var(--color-3);
+  border-radius: 80px;
+}
+#idContenido #cajaIzquierda #contenedorLateral #idSkills {
+  float: left;
+  width: 100%;
+}
+#idContenido #cajaIzquierda #contenedorLateral .button {
+  background-color: var(--color-3);
+  width: 60%;
+  height: 50px;
+  margin: 0 0 20% 20%;
+}
+#idContenido #cajaIzquierda #contenedorLateral .button a {
+  color: var(--color-4);
   text-decoration: none;
 }
-
-.cajaDerecha {
+#idContenido .cajaDerecha {
   float: left;
-  width: 70%;
+  width: 60%;
   margin-left: 5%;
-  padding-left: 5%;
-  margin-top: 1%;
+  margin-right: 5%;
+  font-size: 20px;
 }
-.cajaDerecha h4 {
+#idContenido .cajaDerecha h3 {
   color: var(--color-3);
-  font-family: "Vogue";
-  width: fit-content;
-  margin-top: 1%;
-  margin-bottom: 2%;
+  font-family: "glamorous";
+  font-weight: bold;
+  margin-bottom: 1%;
 }
-.cajaDerecha .cajaPeriodistica {
-  width: fit-content;
+#idContenido .cajaDerecha #idSobremi {
+  padding-left: 5%;
+  width: 80%;
+  font-size: 17px;
+  margin-bottom: 1%;
+}
+#idContenido .cajaDerecha .cajaPeriodistica {
+  padding-left: 5%;
+  width: 80%;
+  font-size: 17px;
+  margin-bottom: 1%;
   columns: 2;
   column-width: 40%;
-  column-rule: 3px solid #e9a8dc;
+  column-rule: 3px solid var(--color-5);
   column-gap: 20%;
-  padding-left: 4%;
 }
-.cajaDerecha .cajaServ {
-  width: 40%;
-  height: 70%;
+#idContenido .cajaDerecha .cajaPeriodistica ul {
+  list-style: square;
+  list-style-position: inside;
+}
+#idContenido .cajaDerecha .cajaPeriodistica ul li::marker {
+  color: var(--color-3);
+}
+#idContenido .cajaDerecha .cajaServ {
   float: left;
+  width: 38%;
+  height: 60%;
+  margin-left: 2%;
   background-color: var(--color-1);
-  padding-left: 10%;
-  padding-top: 3%;
-  padding-bottom: 3%;
-  margin-right: 2%;
+  padding: 3% 0% 3% 8%;
   margin-bottom: 2%;
-  box-shadow: 0px 1px 7px lightgray;
+  box-shadow: var(--sombreado);
   border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
-.cajaDerecha .cajaServ img {
-  width: 20%;
+#idContenido .cajaDerecha .cajaServ img {
   display: inline-block;
+  width: 20%;
   vertical-align: middle;
 }
-.cajaDerecha .cajaServ p {
-  width: 75%;
+#idContenido .cajaDerecha .cajaServ p {
   display: inline-block;
+  width: 70%;
+  color: var(--color-3);
+  font-weight: 600;
+  padding-left: 5%;
 }
-.cajaDerecha .circulo {
-  display: inline-block;
-  margin-right: 7.5%;
-  margin-left: 7.5%;
+#idContenido .cajaDerecha .cajaServ:hover {
+  border: 2px solid purple;
+  transform: scale(1.05);
+}
+#idContenido .cajaDerecha .hobbies .icono-leer {
+  background-image: url("../iconos/leer.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
   width: 15%;
   height: 160px;
   border-radius: 90%;
+  display: inline-block;
+  margin-right: 3%;
+  margin-left: 3%;
+  padding: 15px;
   background-color: var(--color-5);
 }
-.cajaDerecha .circulo img {
-  width: 100%;
-  height: 100%;
+#idContenido .cajaDerecha .hobbies .icono-bailar {
+  background-image: url("../iconos/bailar.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 15%;
+  height: 160px;
+  border-radius: 90%;
+  display: inline-block;
+  margin-right: 3%;
+  margin-left: 3%;
+  padding: 15px;
+  background-color: var(--color-5);
+}
+#idContenido .cajaDerecha .hobbies .icono-viajar {
+  background-image: url("../iconos/viajar.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 15%;
+  height: 160px;
+  border-radius: 90%;
+  display: inline-block;
+  margin-right: 3%;
+  margin-left: 3%;
+  padding: 15px;
+  background-color: var(--color-5);
+}
+#idContenido .cajaDerecha .hobbies .icono-musica {
+  background-image: url("../iconos/musica.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 15%;
+  height: 160px;
+  border-radius: 90%;
+  display: inline-block;
+  margin-right: 3%;
+  margin-left: 3%;
+  padding: 15px;
+  background-color: var(--color-5);
 }
 
 /*--------------------FOOTER-----------------------------*/
@@ -251,25 +418,639 @@ input:checked + .slider-5 {
   position: fixed;
   bottom: 0%;
   text-align: center;
-  padding-top: 1.25%;
+  padding-top: 1.2%;
   padding-bottom: 1.25%;
-  z-index: 3;
+  z-index: 10;
 }
-#idFooter #idRedes {
+#idFooter .redes-sociales {
   position: relative;
+  height: 70%;
+  margin-bottom: 15px;
 }
-#idFooter #idRedes a {
+#idFooter .redes-sociales a {
   display: inline-block;
   width: 7%;
 }
-#idFooter #idRedes a img {
+#idFooter .redes-sociales a .icono-correo {
+  background-image: url("../iconos/correo.png");
+  background-size: 100%;
   width: 40%;
-  height: 40%;
+  height: 63px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#idFooter .redes-sociales a .icono-llamar {
+  background-image: url("../iconos/llamar.png");
+  background-size: 100%;
+  width: 40%;
+  height: 63px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#idFooter .redes-sociales a .icono-linkedin {
+  background-image: url("../iconos/linkedin.png");
+  background-size: 100%;
+  width: 40%;
+  height: 63px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+#idFooter .redes-sociales a .icono-github {
+  background-image: url("../iconos/github.png");
+  background-size: 100%;
+  width: 40%;
+  height: 63px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 #idFooter cite {
-  top: 10%;
-  font-size: small;
   position: relative;
+  top: 10%;
+  height: 30%;
+  font-size: normal;
+}
+
+.button {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--color-3);
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--color-3) 20%, transparent 30%), radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--color-3) 15%, transparent 20%), radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, var(--color-3) 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--color-3) 15%, transparent 20%), radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, var(--color-3) 20%, transparent 20%), radial-gradient(circle, var(--color-3) 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+/*CONTENEDOR DE CADA CIRCULO*/
+/*Posiciones*/
+.circle-wrap {
+  display: inline-block;
+  width: 25%;
+  margin-left: 5%;
+}
+
+.circle-wrap:nth-last-of-type(2) {
+  margin-left: 20%;
+  margin-right: 2%;
+}
+
+/*CIRCULO COMPLETO BLANCO*/
+.progress-circle {
+  font-size: 15px;
+  margin: 0px;
+  position: relative;
+  background-color: var(--color-4);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  line-height: 5em;
+  text-align: center;
+}
+
+/*CIRCULO INTERIOR VIOLETA CLARO*/
+.progress-circle:after {
+  border: none;
+  position: absolute;
+  top: 0.45em;
+  left: 0.35em;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  width: 4.3em;
+  height: 4.3em;
+  background-color: var(--color-1);
+  content: " ";
+  z-index: 4;
+}
+
+/* TEXTO DENTRO DEL CIRCULO */
+.progress-circle span {
+  position: absolute;
+  line-height: 5.1em;
+  width: 5em;
+  text-align: center;
+  display: block;
+  color: black;
+  z-index: 5;
+}
+
+/* MITAD CIRCULO DERECHO */
+/* Cuando p<50, mitad derecha blanco*/
+.left-half-clipper {
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  /* necesario para clip clipping */
+  background-color: var(--color-4);
+  clip: rect(0, 5em, 5em, 2.5em);
+  /*recorte mitad izquierda de circulo*/
+  top: -3.75px;
+  z-index: 3;
+}
+
+/* Cuando p>50, no recorta la mitad izquierda*/
+/*circulo completo blanco*/
+.progress-circle.over50 .left-half-clipper {
+  clip: rect(auto, auto, auto, auto);
+}
+
+.value-bar {
+  /*Este es un cuadrado superpuesto, que se hace redondo con el radio del borde, 
+   luego se corta para mostrar solo la mitad izquierda y luego se gira en el sentido 
+   de las agujas del reloj para escapar del trazado de recorte exterior.*/
+  position: absolute;
+  /*necesario para clip clipping*/
+  clip: rect(0, 2.5em, 5em, 0);
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 0.45em solid var(--color-3);
+  /*El borde es 0,35, pero al aumentarlo se eliminan los artefactos visuales.*/
+  box-sizing: border-box;
+  top: -3px;
+  z-index: 4;
+}
+
+/* Barra de progreso que ocupa toda la mitad derecha para los valores de más de 50% */
+.progress-circle.over50 .first50-bar {
+  /*Barra de progreso para el primer 50%, llenando toda la mitad derecha*/
+  position: absolute;
+  /*necesario para clip clipping*/
+  clip: rect(0, 5em, 5em, 2.5em);
+  border: 0.45em solid var(--color-3);
+  z-index: 10;
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  z-index: 4;
+  top: -3px;
+}
+
+.progress-circle:not(.over50) .first50-bar {
+  display: none;
+}
+
+/* posicion de rotacion de la barra de progreso */
+.progress-circle.p0 .value-bar {
+  transform: rotate(0deg);
+  display: none;
+}
+
+.progress-circle.p1 .value-bar {
+  transform: rotate(3.6deg);
+}
+
+.progress-circle.p2 .value-bar {
+  transform: rotate(7.2deg);
+}
+
+.progress-circle.p3 .value-bar {
+  transform: rotate(10.8deg);
+}
+
+.progress-circle.p4 .value-bar {
+  transform: rotate(14.4deg);
+}
+
+.progress-circle.p5 .value-bar {
+  transform: rotate(18deg);
+}
+
+.progress-circle.p6 .value-bar {
+  transform: rotate(21.6deg);
+}
+
+.progress-circle.p7 .value-bar {
+  transform: rotate(25.2deg);
+}
+
+.progress-circle.p8 .value-bar {
+  transform: rotate(28.8deg);
+}
+
+.progress-circle.p9 .value-bar {
+  transform: rotate(32.4deg);
+}
+
+.progress-circle.p10 .value-bar {
+  transform: rotate(36deg);
+}
+
+.progress-circle.p11 .value-bar {
+  transform: rotate(39.6deg);
+}
+
+.progress-circle.p12 .value-bar {
+  transform: rotate(43.2deg);
+}
+
+.progress-circle.p13 .value-bar {
+  transform: rotate(46.8deg);
+}
+
+.progress-circle.p14 .value-bar {
+  transform: rotate(50.4deg);
+}
+
+.progress-circle.p15 .value-bar {
+  transform: rotate(54deg);
+}
+
+.progress-circle.p16 .value-bar {
+  transform: rotate(57.6deg);
+}
+
+.progress-circle.p17 .value-bar {
+  transform: rotate(61.2deg);
+}
+
+.progress-circle.p18 .value-bar {
+  transform: rotate(64.8deg);
+}
+
+.progress-circle.p19 .value-bar {
+  transform: rotate(68.4deg);
+}
+
+.progress-circle.p20 .value-bar {
+  transform: rotate(72deg);
+}
+
+.progress-circle.p21 .value-bar {
+  transform: rotate(75.6deg);
+}
+
+.progress-circle.p22 .value-bar {
+  transform: rotate(79.2deg);
+}
+
+.progress-circle.p23 .value-bar {
+  transform: rotate(82.8deg);
+}
+
+.progress-circle.p24 .value-bar {
+  transform: rotate(86.4deg);
+}
+
+.progress-circle.p25 .value-bar {
+  transform: rotate(90deg);
+}
+
+.progress-circle.p26 .value-bar {
+  transform: rotate(93.6deg);
+}
+
+.progress-circle.p27 .value-bar {
+  transform: rotate(97.2deg);
+}
+
+.progress-circle.p28 .value-bar {
+  transform: rotate(100.8deg);
+}
+
+.progress-circle.p29 .value-bar {
+  transform: rotate(104.4deg);
+}
+
+.progress-circle.p30 .value-bar {
+  transform: rotate(108deg);
+}
+
+.progress-circle.p31 .value-bar {
+  transform: rotate(111.6deg);
+}
+
+.progress-circle.p32 .value-bar {
+  transform: rotate(115.2deg);
+}
+
+.progress-circle.p33 .value-bar {
+  transform: rotate(118.8deg);
+}
+
+.progress-circle.p34 .value-bar {
+  transform: rotate(122.4deg);
+}
+
+.progress-circle.p35 .value-bar {
+  transform: rotate(126deg);
+}
+
+.progress-circle.p36 .value-bar {
+  transform: rotate(129.6deg);
+}
+
+.progress-circle.p37 .value-bar {
+  transform: rotate(133.2deg);
+}
+
+.progress-circle.p38 .value-bar {
+  transform: rotate(136.8deg);
+}
+
+.progress-circle.p39 .value-bar {
+  transform: rotate(140.4deg);
+}
+
+.progress-circle.p40 .value-bar {
+  transform: rotate(144deg);
+}
+
+.progress-circle.p41 .value-bar {
+  transform: rotate(147.6deg);
+}
+
+.progress-circle.p42 .value-bar {
+  transform: rotate(151.2deg);
+}
+
+.progress-circle.p43 .value-bar {
+  transform: rotate(154.8deg);
+}
+
+.progress-circle.p44 .value-bar {
+  transform: rotate(158.4deg);
+}
+
+.progress-circle.p45 .value-bar {
+  transform: rotate(162deg);
+}
+
+.progress-circle.p46 .value-bar {
+  transform: rotate(165.6deg);
+}
+
+.progress-circle.p47 .value-bar {
+  transform: rotate(169.2deg);
+}
+
+.progress-circle.p48 .value-bar {
+  transform: rotate(172.8deg);
+}
+
+.progress-circle.p49 .value-bar {
+  transform: rotate(176.4deg);
+}
+
+.progress-circle.p50 .value-bar {
+  transform: rotate(180deg);
+}
+
+.progress-circle.p51 .value-bar {
+  transform: rotate(183.6deg);
+}
+
+.progress-circle.p52 .value-bar {
+  transform: rotate(187.2deg);
+}
+
+.progress-circle.p53 .value-bar {
+  transform: rotate(190.8deg);
+}
+
+.progress-circle.p54 .value-bar {
+  transform: rotate(194.4deg);
+}
+
+.progress-circle.p55 .value-bar {
+  transform: rotate(198deg);
+}
+
+.progress-circle.p56 .value-bar {
+  transform: rotate(201.6deg);
+}
+
+.progress-circle.p57 .value-bar {
+  transform: rotate(205.2deg);
+}
+
+.progress-circle.p58 .value-bar {
+  transform: rotate(208.8deg);
+}
+
+.progress-circle.p59 .value-bar {
+  transform: rotate(212.4deg);
+}
+
+.progress-circle.p60 .value-bar {
+  transform: rotate(216deg);
+}
+
+.progress-circle.p61 .value-bar {
+  transform: rotate(219.6deg);
+}
+
+.progress-circle.p62 .value-bar {
+  transform: rotate(223.2deg);
+}
+
+.progress-circle.p63 .value-bar {
+  transform: rotate(226.8deg);
+}
+
+.progress-circle.p64 .value-bar {
+  transform: rotate(230.4deg);
+}
+
+.progress-circle.p65 .value-bar {
+  transform: rotate(234deg);
+}
+
+.progress-circle.p66 .value-bar {
+  transform: rotate(237.6deg);
+}
+
+.progress-circle.p67 .value-bar {
+  transform: rotate(241.2deg);
+}
+
+.progress-circle.p68 .value-bar {
+  transform: rotate(244.8deg);
+}
+
+.progress-circle.p69 .value-bar {
+  transform: rotate(248.4deg);
+}
+
+.progress-circle.p70 .value-bar {
+  transform: rotate(252deg);
+}
+
+.progress-circle.p71 .value-bar {
+  transform: rotate(255.6deg);
+}
+
+.progress-circle.p72 .value-bar {
+  transform: rotate(259.2deg);
+}
+
+.progress-circle.p73 .value-bar {
+  transform: rotate(262.8deg);
+}
+
+.progress-circle.p74 .value-bar {
+  transform: rotate(266.4deg);
+}
+
+.progress-circle.p75 .value-bar {
+  transform: rotate(270deg);
+}
+
+.progress-circle.p76 .value-bar {
+  transform: rotate(273.6deg);
+}
+
+.progress-circle.p77 .value-bar {
+  transform: rotate(277.2deg);
+}
+
+.progress-circle.p78 .value-bar {
+  transform: rotate(280.8deg);
+}
+
+.progress-circle.p79 .value-bar {
+  transform: rotate(284.4deg);
+}
+
+.progress-circle.p80 .value-bar {
+  transform: rotate(288deg);
+}
+
+.progress-circle.p81 .value-bar {
+  transform: rotate(291.6deg);
+}
+
+.progress-circle.p82 .value-bar {
+  transform: rotate(295.2deg);
+}
+
+.progress-circle.p83 .value-bar {
+  transform: rotate(298.8deg);
+}
+
+.progress-circle.p84 .value-bar {
+  transform: rotate(302.4deg);
+}
+
+.progress-circle.p85 .value-bar {
+  transform: rotate(306deg);
+}
+
+.progress-circle.p86 .value-bar {
+  transform: rotate(309.6deg);
+}
+
+.progress-circle.p87 .value-bar {
+  transform: rotate(313.2deg);
+}
+
+.progress-circle.p88 .value-bar {
+  transform: rotate(316.8deg);
+}
+
+.progress-circle.p89 .value-bar {
+  transform: rotate(320.4deg);
+}
+
+.progress-circle.p90 .value-bar {
+  transform: rotate(324deg);
+}
+
+.progress-circle.p91 .value-bar {
+  transform: rotate(327.6deg);
+}
+
+.progress-circle.p92 .value-bar {
+  transform: rotate(331.2deg);
+}
+
+.progress-circle.p93 .value-bar {
+  transform: rotate(334.8deg);
+}
+
+.progress-circle.p94 .value-bar {
+  transform: rotate(338.4deg);
+}
+
+.progress-circle.p95 .value-bar {
+  transform: rotate(342deg);
+}
+
+.progress-circle.p96 .value-bar {
+  transform: rotate(345.6deg);
+}
+
+.progress-circle.p97 .value-bar {
+  transform: rotate(349.2deg);
+}
+
+.progress-circle.p98 .value-bar {
+  transform: rotate(352.8deg);
+}
+
+.progress-circle.p99 .value-bar {
+  transform: rotate(356.4deg);
+}
+
+.progress-circle.p100 .value-bar {
+  transform: rotate(360deg);
 }
 
 html {
@@ -286,6 +1067,11 @@ html {
   box-sizing: inherit;
   padding: 0px;
   margin: 0px;
+}
+
+@font-face {
+  font-family: "glamorous";
+  src: url("../letra/glamorous.otf");
 }
 
 /*# sourceMappingURL=main.css.map */

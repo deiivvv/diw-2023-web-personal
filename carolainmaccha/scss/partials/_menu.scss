@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'glamorous';
+    src: url("../letra/glamorous.otf");
+  }
+  
+//header id=menu
 #menu {
     background-color: var(--color-1);
     width: 100%;
@@ -7,11 +13,12 @@
     z-index: 3;
     text-align: center;
     padding-top: 45px;
-   
+    //imagen del logo
     img {
         display: inline-block;
         width: map-get($tamanios-iconos-horizontal , 'muyPequenio');
     }
+    //elementos del menu en nav
     nav {
         display: inline-block;
         width: 70%;
@@ -20,9 +27,9 @@
             width: 20%;
             text-decoration: none;
             font-style: italic;
-            font-size: large;
+            font-size:25px;
             color: var(--color-3);
-            font-weight:bolder;
+            font-family: 'glamorous';
         }
         a:hover{
             color:var(--color-4);

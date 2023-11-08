@@ -1,0 +1,130 @@
+// USO: VALORES MENORES DE 50% CLASE -> ej: .progress-circle p30 (30%)
+// VALORES MAYORES DE 50% CLASE ->ej: .progress-circle over50 p80 (80%)
+/*CONTENEDOR DE CADA CIRCULO*/
+/*Posiciones*/
+.circle-wrap {
+   display: inline-block;
+   width: 25%;
+   margin-left: 5%;
+}
+
+.circle-wrap:nth-last-of-type(2) {
+   margin-left: 20%;
+   margin-right: 2%;
+}
+
+/*CIRCULO COMPLETO BLANCO*/
+.progress-circle {
+   font-size: 15px;
+   margin: 0px;
+   position: relative;
+   background-color: var(--color-4);
+   width: 5em;
+   height: 5em;
+   border-radius: 50%;
+   line-height: 5em;
+   text-align: center;
+}
+
+/*CIRCULO INTERIOR VIOLETA CLARO*/
+.progress-circle:after {
+   border: none;
+   position: absolute;
+   top: 0.45em;
+   left: 0.35em;
+   text-align: center;
+   display: block;
+   border-radius: 50%;
+   width: 4.3em;
+   height: 4.3em;
+   background-color: var(--color-1);
+   content: " ";
+   z-index: 4;
+}
+
+/* TEXTO DENTRO DEL CIRCULO */
+.progress-circle span {
+   position: absolute;
+   line-height: 5.1em;
+   width: 5em;
+   text-align: center;
+   display: block;
+   color: black;
+   z-index: 5;
+}
+
+/* MITAD CIRCULO DERECHO */
+/* Cuando p<50, mitad derecha blanco*/
+.left-half-clipper {
+   border-radius: 50%;
+   width: 5em;
+   height: 5em;
+   position: absolute;
+   /* necesario para clip clipping */
+   //rect(top, right, bottom, left)
+   background-color: var(--color-4);
+   clip: rect(0, 5em, 5em, 2.5em);
+   /*recorte mitad izquierda de circulo*/
+   top: -3.75px;
+   z-index: 3;
+
+}
+
+/* Cuando p>50, no recorta la mitad izquierda*/
+/*circulo completo blanco*/
+.progress-circle.over50 .left-half-clipper {
+   clip: rect(auto, auto, auto, auto); //rect(top, right, bottom, left)
+
+}
+
+//BARRA DE PROGRESO COLOR VIOLETA
+.value-bar {
+   /*Este es un cuadrado superpuesto, que se hace redondo con el radio del borde, 
+    luego se corta para mostrar solo la mitad izquierda y luego se gira en el sentido 
+    de las agujas del reloj para escapar del trazado de recorte exterior.*/
+   position: absolute;
+   /*necesario para clip clipping*/
+   clip: rect(0, 2.5em, 5em, 0); //rect(top, right, bottom, left)
+   width: 5em;
+   height: 5em;
+   border-radius: 50%;
+   //COLOR CLARO BARRA DE PROGRESO
+   border: 0.45em solid var(--color-3);
+   /*El borde es 0,35, pero al aumentarlo se eliminan los artefactos visuales.*/
+   box-sizing: border-box;
+   top: -3px;
+   z-index: 4;
+}
+
+//BARRA DE PROGRESO MITAD DERECHA VIOLETA PARA VALOR >50
+/* Barra de progreso que ocupa toda la mitad derecha para los valores de más de 50% */
+.progress-circle.over50 .first50-bar {
+   /*Barra de progreso para el primer 50%, llenando toda la mitad derecha*/
+   position: absolute;
+   /*necesario para clip clipping*/
+   clip: rect(0, 5em, 5em, 2.5em);
+   border: 0.45em solid var(--color-3);
+   z-index: 10;
+   border-radius: 50%;
+   width: 5em;
+   height: 5em;
+   z-index: 4;
+   top: -3px;
+}
+
+//BARRA DE PROGRESO MITAD DERECHA VIOLETA PARA VALOR <50 NO SE MUESTRA
+.progress-circle:not(.over50) .first50-bar {
+   display: none;
+}
+
+/* posicion de rotacion de la barra de progreso */
+@for $i from 0 through 100 {
+   .progress-circle.p#{$i} .value-bar {
+      $deg: $i * 3.6; // Calcula los grados
+      transform: rotate(#{$deg}deg);
+
+      @if $i ==0 {
+         display: none;
+      }
+   }
+}
