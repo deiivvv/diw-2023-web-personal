@@ -6,6 +6,7 @@
     height: 100%;
 }
 
+//Foto de mantenimiento en funcion de si debug es true o no
 .foto-construccion{
     width: 50%;
     margin-left: 25%;
@@ -16,6 +17,7 @@
     }
 }
 
+//Posicion sticky para que se queden en pantalla todo el rato
 .botones{
     position: sticky;
     top:0;
@@ -25,5 +27,6 @@
     width: map-get($tamanio-iconos-ancho, 'muy-pequeno');
     height: 3.5%;
     padding: 0%;
+    padding-top: 0.5%;
     margin: 0%;
 }

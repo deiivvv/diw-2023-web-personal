@@ -3,7 +3,7 @@
   --color-2: #B6FFFA;
   --color-3: #98E4FF;
   --color-4: #80B3FF;
-  --color-5: #687EFF;
+  --color-5: #788af3;
 }
 :root .tema-oscuro {
   --color-1: #000000;
@@ -61,6 +61,55 @@ input:checked + .slider-5 {
   left: 0px;
 }
 
+footer {
+  background-color: var(--color-5);
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.redes-sociales .icono-gmail {
+  background-image: url("../imagenes/gmail.png");
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+}
+.redes-sociales .icono-instagram {
+  background-image: url("../imagenes/instagram.png");
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+}
+.redes-sociales .icono-github {
+  background-image: url("../imagenes/github.png");
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+}
+.redes-sociales .icono-linkedin {
+  background-image: url("../imagenes/linkedin.png");
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+}
+.redes-sociales .icono-discord {
+  background-image: url("../imagenes/discord.png");
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+}
+
 .datos {
   height: 350px;
   width: 90%;
@@ -68,20 +117,19 @@ input:checked + .slider-5 {
   margin: 7%;
 }
 
-.foto {
+/*Antes tenia el scss de la foto asi, pero lo cambio para inluir anidamiento
+.foto{
+    margin: 0;
+    height: 100%;
+    float: left;
+    width: 39%;
+}
+*/
+.datos h1 {
   margin: 0;
   height: 100%;
   float: left;
   width: 39%;
-}
-
-.dato {
-  margin: 0;
-  background-color: var(--color-2);
-  margin: 1%;
-  float: left;
-  width: 28.5%;
-  max-width: 28.5%;
 }
 
 .slider-container {
@@ -150,6 +198,7 @@ button {
   border: none;
   background-color: #bebebe;
   color: #000000;
+  border-radius: 50%;
 }
 
 .prev {
@@ -160,38 +209,16 @@ button {
   right: 10px;
 }
 
-footer {
-  background-color: var(--color-5);
-  text-align: center;
-  padding: 20px;
+.dato {
+  margin: 0;
+  background-color: var(--color-2);
+  margin: 1%;
+  float: left;
+  width: 28.5%;
+  max-width: 28.5%;
 }
-
-.circle-container {
-  display: inline;
-  justify-content: space-between;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.circle {
-  width: 7%;
-  background-color: transparent;
-  border-radius: 50%;
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-}
-
-.circle img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 50%;
-}
-
-footer {
-  width: 80%;
-  margin: auto;
+.dato h2 {
+  font-size: 19px;
 }
 
 html {
@@ -234,6 +261,7 @@ body {
   width: 5%;
   height: 3.5%;
   padding: 0%;
+  padding-top: 0.5%;
   margin: 0%;
 }
 

@@ -14,3 +14,8 @@ html {
 body{
     background-color: var(--color-1);
 }
+
+//llamada a la agrupacion border-radius-buttons
+@mixin border-radius-buttons($border-radius-but){
+    border-radius: $border-radius-but;
+}
