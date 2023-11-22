@@ -1,3 +1,7 @@
+.dato{
+    border-radius: 5px;
+}
+
 .datos{
     height: 350px;
     width: 90%;
@@ -13,14 +17,22 @@
     width: 39%;
 }
 */
-.datos h1{
+.datos .foto{
     margin: 0;
     height: 100%;
     float: left;
     width: 39%;
+    background-color: var(--color-2);
 }
 
-
+.info{
+    height: 100%;
+    background-color: var(--color-2);
+}
+.info h2{
+    height: 100%;
+    background-color: var(--color-3);
+}
 
 .slider-container {
     position: relative;
@@ -44,6 +56,7 @@
 img {
     width: 100%;
     height: auto;
+    border-radius: 15px;
 }
 
 .prev {

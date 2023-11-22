@@ -1,9 +1,9 @@
 :root .tema-claro {
   --color-1: #ffffff;
-  --color-2: #B6FFFA;
-  --color-3: #98E4FF;
-  --color-4: #80B3FF;
-  --color-5: #788af3;
+  --color-2: #7D8991;
+  --color-3: #BED0DE;
+  --color-4: #5A6269;
+  --color-5: #373C40;
 }
 :root .tema-oscuro {
   --color-1: #000000;
@@ -110,6 +110,10 @@ footer {
   display: inline-block;
 }
 
+.dato {
+  border-radius: 5px;
+}
+
 .datos {
   height: 350px;
   width: 90%;
@@ -125,11 +129,22 @@ footer {
     width: 39%;
 }
 */
-.datos h1 {
+.datos .foto {
   margin: 0;
   height: 100%;
   float: left;
   width: 39%;
+  background-color: var(--color-2);
+}
+
+.info {
+  height: 100%;
+  background-color: var(--color-2);
+}
+
+.info h2 {
+  height: 100%;
+  background-color: var(--color-3);
 }
 
 .slider-container {
@@ -154,6 +169,7 @@ footer {
 img {
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
 
 .prev {
@@ -248,7 +264,7 @@ body {
 .foto-construccion {
   width: 50%;
   margin-left: 25%;
-  display: inline;
+  display: none;
 }
 
 .botones {
