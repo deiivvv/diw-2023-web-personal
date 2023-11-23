@@ -1,0 +1,42 @@
+.header{
+    height: 150px;
+    background-color: var(--color-4);
+    position: sticky;
+    top: 0px;
+    // aqui va la anidacion
+    .foto{
+        float: left;
+        height: 150px;
+        border-radius: 50%;
+    }
+    .nombre{
+        width: 84.66%;
+        float: left;
+        text-align: center;
+        font-size: 30px;
+        color: var(--color-1);
+    }
+    .menu{
+        color: var(--color-2);
+        display: inline-block;
+        width: 84.66%;
+        text-align: center;
+        // aqui va la anidacion
+        .inicio{
+            font-size: 45px;
+            float: left;
+            margin-left: 25%;
+            color: var(--color-1);
+        }
+        .sobremi{
+            font-size: 45px;
+            float: right;
+            margin-right: 25%;
+            color: var(--color-1);
+        }
+    }
+}
+
+
+
+

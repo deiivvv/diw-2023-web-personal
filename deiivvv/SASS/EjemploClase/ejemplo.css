@@ -1,0 +1,48 @@
+/* .color-red{
+    background-color: red;
+}
+
+.color-blue{
+    background-color: blue;
+}
+
+.color-green{
+    background-color: green;
+} */
+.color-red {
+  background-color: red;
+}
+
+.color-blue {
+  background-color: blue;
+}
+
+.color-green {
+  background-color: green;
+}
+
+.icono-facebook {
+  background-image: url("/imagenes/facebook");
+}
+
+.icono-instagram {
+  background-image: url("/imagenes/instagram");
+}
+
+.icono-gamematch {
+  background-image: url("/imagenes/gamematch");
+}
+
+.encabezado {
+  font-family: Arial sans-serif;
+}
+
+.parrafo {
+  font-family: "Helvetica Neue" sans-serif;
+}
+
+.enlace {
+  font-family: "Times New Roman" serif;
+}
+
+/*# sourceMappingURL=ejemplo.css.map */

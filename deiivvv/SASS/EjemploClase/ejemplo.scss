@@ -1,0 +1,40 @@
+/* .color-red{
+    background-color: red;
+}
+
+.color-blue{
+    background-color: blue;
+}
+
+.color-green{
+    background-color: green;
+} */
+
+$colores:red,blue,green;
+
+@each $color in $colores{
+    .color-#{$color}{
+        background-color: #{$color};
+    }
+}
+
+$iconos: facebook, instagram, gamematch;
+
+@each $icono in $iconos{
+    .icono-#{$icono}{
+        background-image: url('/imagenes/#{$icono}')
+    }
+}
+
+
+$fuentes:(
+    encabezado: Arial sans-serif,
+    parrafo: 'Helvetica Neue' sans-serif,
+    enlace: 'Times New Roman' serif
+);
+
+@each $nombre,$fuente in $fuentes{
+    .#{$nombre}{
+        font-family: $fuente;
+    }
+}

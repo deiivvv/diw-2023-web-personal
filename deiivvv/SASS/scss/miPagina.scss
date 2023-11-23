@@ -1,15 +1,16 @@
+// @import "./partials/reset";
 
+$color-1-claro: #000000;
+$color-2-claro: #CDF5FD;
+$color-3-claro: #A0E9FF;
+$color-4-claro: #00A9FF;
 
-$color-1-claro: #ffffff;
-$color-2-claro: #DAFFFB;
-$color-3-claro: #64CCC5;
-$color-4-claro: #176B87;
-
+/*----------listas-------------*/
 $colores-oscuros : (
-  #000000,
-  #d6b1e7,
-  #c118e2,
-  #a343e4,
+  #ffffff, 
+  #4E31AA,
+  #3A1078,
+  #13005A,
 );
 
 :root {
@@ -26,21 +27,22 @@ $colores-oscuros : (
     --color-4:  #{nth($colores-oscuros,4)};
   }
 }
+/*----------listas-------------*/
+
 
 /*----------mapas-------------*/
 $tamanios-iconos-horizontal : (
  'pequenio':40px, 
- 'medio':60px,
- 'grande':100px
+ 'medio':75px,
+ 'grande':150px
 );
 
 $tamanios-iconos-vertical : (
  'pequenio':40px, 
- 'medio':60px,
- 'grande':100px
+ 'medio':75px,
+ 'grande':150px
 );
 /*----------mapas-------------*/
-
 
 
 /* ----------Poner siempre------------ */
@@ -58,7 +60,30 @@ html {
     box-sizing: inherit;
 }
 
+/*-----------FUNCION----------------*/
+@function ancho($columna, $total){
+@return percentage($columna/ $total);
+}
+/*-----------FUNCION----------------*/
+
+/*-----------FUNCION IF/DEBUG-------------*/
+$debug:false;
+
+.imagen-obra {
+    width: 30%;
+    @if $debug == false {
+      display: none;
+    }@else{
+      display: inline;
+    }
+  }
+
+/*-----------FUNCION IF/DEBUG-------------*/
+
+
+/* ----------Poner siempre------------ */
 @import "./partials/_boton.scss";
 @import "./partials/header";
 @import "./partials/main";
 @import "./partials/footer";
+/* ----------Poner siempre------------ */
