@@ -1,26 +1,53 @@
+// Función para determinar la visibilidad de la imagen
+@function mostrarImagen() {
+  //if con la imagen de sitio-en-construccion
+  @if $debug == false {
+    @return none;
+  } @else {
+    @return inline;
+  }
+}
 
-//contenido o main
-.datos,.formacion{
-    background-color:var(--color-2);
-    float:left;
-    width: 40%;
-    margin: 5%;
+// Estilos para el elemento p.en-construccion
+p.en-construccion {
+  text-align: center;
+
+  img {
+    width: 50%;
+    display: mostrarImagen();
+  }
 }
-.aficiones{
-    float: left;
-    width: 100%;
+
+// Estilos comunes para las secciones "datos" y "formacion"
+.datos,
+.formacion {
+  background-color: var(--color-3);
+  float: left;
+  width: 40%;
+  margin: 10px;
+  margin-left: 132px;
+  padding: 20px;
 }
-.tituloaficiones{
-    width: 100%;
-    text-align: center;
-    margin-top: 5%;
-}
-.aficiones{
-    text-align: center;
-}
-.aficiones img{
+
+// Estilos para la sección de aficiones
+.aficiones {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  background-color: var(--color-5);
+
+  // Estilos para el título h2 dentro de la sección de aficiones
+  h2 {
+    margin-top: 10px;
+  }
+
+  // Estilos para la imagenes dentro de la sección de aficiones
+  img {
     display: inline-block;
-    width: 15%;
-    margin-left: 3%;
-    margin-right: 3%;
+    width: 100px;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
 }

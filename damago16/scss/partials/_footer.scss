@@ -1,23 +1,31 @@
-//footer parte de abajo
-footer{
-    background-color: var(--color-2);
+// Estilos para la parte inferior del sitio (footer)
+footer {
+    width: 93.12%;
+    background-color: var(--color-4);
     text-align: center;
     display: block;
-    clear: left;
-}
-.tituloredes{
-    display: inline-block;
-    font-size: 225%;
-}
-.redes{
-    display: inline-block;
-    font-size: 225%;
-    width:14%;
-}
-.imagenes{
-    padding-left: 1%;
-    padding-top: 25%; 
-    width:75%;
-    height:14%;
-    display: inline-block;
-}
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    margin-right: 3.4%;
+    $redes-sociales: instagram github mail whatsapp twitter linkedin;
+    .redes-sociales {
+      // Estilos para el título h2 dentro del footer
+      h2 {
+        display: inline-block;
+        font-size: 225%;
+      }
+      @each $red in $redes-sociales {
+          .icono-#{$red} { 
+              background-image: url("../img/#{$red}.png");
+              width: map-get($tamanios-iconos-horizontal , 'pequenio' );
+              height: map-get($tamanios-iconos-vertical , 'grande' );
+              background-repeat: no-repeat;
+              background-position: center center;
+              display: inline-block;
+              margin:-38px 50px;
+          }
+      }
+    }
+  }
+  

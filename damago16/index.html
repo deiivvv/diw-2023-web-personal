@@ -8,18 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
-    <link href="./css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim:wght@400&display=swap">
+    <link href="./css/estilos.css" rel="stylesheet" />
     <script src="./js/javascript.js" defer></script>
 </head>
 
 <body class="tema-claro">
+    <p class="en-construccion">
+        <img src="./img/web-en-construccion.jpg"></img>
+      </p>
     <header>
-        <img class="imagen" src="img/perfil.png" alt="foto de perfil" width="250px" height="250px">
-        <h1 class="nombre">Daniel Marín Gómez</h1>
-        <nav class="menu">
-            <a href="#" class="inicio">Inicio</a>
-            <a href="#" class="sobreMi">Sobre mí</a>
+        <img src="img/perfil.png" alt="foto de perfil" width="250px" height="250px">
+        <h1>Daniel Marín Gómez</h1>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Sobre mí</a>
         </nav><br>
         <label class="switch-5">
             <input type="checkbox" id="toggleTheme" />
@@ -48,23 +51,36 @@
         </section>
 
         <section class="aficiones">
-            <h2 class="tituloaficiones">Aficiones:</h2>
+            <h2>Aficiones:</h2>
             <img src="img/gym.png" alt="icono de gimnasio">
-            <img src="img/gym.png" alt="icono de gimnasio">
-            <img src="img/gym.png" alt="icono de gimnasio">
-            <img src="img/gym.png" alt="icono de gimnasio">
+            <img src="img/cine.png" alt="icono de cine">
+            <img src="img/musica.png" alt="icono de música">
+            <img src="img/videojuegos.png" alt="icono de videojuegos">
         </section>
     </main>
     <footer>
-        <nav>
-            <a class="redes" href=""><img class="imagenes" src="img/ig.png" alt="icono instagram"></a>
-            <a class="redes" href=""><img class="imagenes" src="img/ig.png" alt="icono instagram"></a>
-            <a class="redes" href=""><img class="imagenes" src="img/ig.png" alt="icono instagram"></a>
-            <h2 class="tituloredes">REDES</h2>
-            <a class="redes" href=""><img class="imagenes" src="img/ig.png" alt="icono instagram"></a>
-            <a class="redes" href=""><img class="imagenes" src="img/ig.png" alt="icono instagram"></a>
-            <a class="redes" href=""><img class="imagenes" src="img/ig.png" alt="icono instagram"></a>
-        </nav>
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com" target="_blank">
+              <div class="icono-instagram"> </div>
+            </a>
+            <a href="https://www.github.com" target="_blank">
+              <div class="icono-github"> </div>
+            </a>
+            <a href="mailto:tuemail@example.com">
+              <div class="icono-mail"> </div>
+            </a>
+            <h2>REDES</h2>
+            <a href="https://api.whatsapp.com/send?phone=TUNUMEROTELEFONICO" target="_blank">
+              <div class="icono-whatsapp"> </div>
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+              <div class="icono-twitter"> </div>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+              <div class="icono-linkedin"> </div>
+            </a>
+          </div>          
+        <small>&copy; Copyright DAMAGO. All rights reserved.</small>
     </footer>
 </body>
 
