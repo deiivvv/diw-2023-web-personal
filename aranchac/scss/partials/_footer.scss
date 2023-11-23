@@ -1,20 +1,31 @@
 /* ***** FOOTER ***** */
 
+$redes: linkedin git gmail twitter facebook instagram;
+
+// Estructura each dibujando los iconos:
+//Incluye map para aplicar tamaños.
+.redes {
+    @each $red in $redes {
+        .icono-#{$red} {
+            background-image: url("../iconosFooter/#{$red}.svg");
+            display: inline-block;
+            padding:  0px 5%;
+            height: map-get($tam-icons-height, 'pequenio' );
+            width: map-get($tam-icons-width, 'pequenio' );
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
+
 footer{  
     position: fixed;
-    bottom: 5px;
-    
+    bottom: 5px;  
     display: block;
     width: 100%;
     text-align: center;
     background-color: var(--color-3);
-    border: 3px solid var(--color-2);
+    border: 3px solid black;
     padding: 5px;
-    img {
-        display: inline-block;
-        padding:  0px 5%;
-        height: map-get($tam-icons-height, 'pequenio' );
-
-}
     
 }
