@@ -7,38 +7,36 @@
     <script src="proyectoCv.js" defer></script>
 </head>
 <body class="tema-claro">
-    <header id="hola">
+    <p class="p_obras">
+        <img src="./img/obras.jpeg" alt="debug" class="debug">
+    </p>
+    <!--MENU-->
+    <header id="idmenu">
         <h1 class="menu c_nombre">Alvaro</h1>
-         <h1 class="menu c_foto">FOTO</h1> 
+         <img class="menu c_foto" src="./img/user.png"> 
         <h1 class="menu c_apell">Gallego</h1>
-    </header>                                                                         
+    </header>                                                                       
     <main>
-        <!-- <div class="slider-container">
-            <div class="slider">
-                <div class="slide"><img src="imagen1.jpg" alt="Imagen 1"></div>
-                <div class="slide"><img src="imagen2.jpg" alt="Imagen 2"></div>
-                <div class="slide"><img src="imagen3.jpg" alt="Imagen 3"></div>
-                 Agrega más imágenes según sea necesario 
-            </div>
-        
-            <button class="prev" onclick="changeSlide(-1)">Anterior</button>
-            <button class="next" onclick="changeSlide(1)">Siguiente</button>
-        </div> -->
-        
-        
-
+        <!-- CARRUSEL DE FOTOS - Lenguajes Programacion-->
         <section class="slider-container">
             <div class="slider">
-                <article class="slide">
-                    <p>Esta es la información del primer slide.</p>
+                <article class="slide" id="idPhp">
+                    <img src="./img/lenguajesProgramacion/php.png" alt="PHP" title="PHP">
                 </article>
-                <article class="slide">
-                    <p>Esta es la información del segundo slide.</p>
+                <article class="slide" id="idJava">
+                    <img src="./img/lenguajesProgramacion/java.png" alt="java" title="JAVA">
                 </article>
-                <article class="slide">
-                    <p>Esta es la información del tercer slide.</p>
+                <article class="slide" id="idJavaScript">
+                    <img src="./img/lenguajesProgramacion/js.png" alt="javaScript" title="JAVA SCRIPT">
+                </article>
+                <article class="slide" id="idHtml">
+                    <img src="./img/lenguajesProgramacion/html-5.png" alt="html" title="HTML">
+                </article>
+                <article class="slide" id="idCss">
+                    <img src="./img/lenguajesProgramacion/css-3.png" alt="css" title="CSS">
                 </article>
             </div>
+            <!-- BOTONES CARRUSEL-->
             <div id="id_btn">
                 <button class="prev" onclick="changeSlide(-1)"><</button>
                 <button class="next" onclick="changeSlide(1)">></button>
@@ -46,65 +44,84 @@
             <input type="checkbox" id="toggleTheme" >Cambiar Tema
         </section>
         
-        
+        <!--TARJETAS DESPLEGABLES-->
         <section class="c_desplegable">
             <div class="tarjeta">
                 <div class="cabecera" onclick="toggleCard(1)">
-                    <h2>Tarjeta Desplegable 1</h2>
+                    <h2>Experiencia</h2>
                 </div>
                 <div class="contenido" id="contenido_1">
-                    <p>Esta es la información que se mostrará u ocultará.</p>
+                    <p>-Prácticas Empresa Desarrollo App Web</p>
+                    <p>-Vendedor-Captador | Wesser</p>
                 </div>
             </div>
             <div class="tarjeta">
                 <div class="cabecera" onclick="toggleCard(2)">
-                    <h2>Tarjeta Desplegable 2</h2>
+                    <h2>Estudios</h2>
                 </div>
                 <div class="contenido" id="contenido_2">
-                    <p>Esta es la información que se mostrará u ocultará.</p>
+                    <p class="estudios_daw">Desarrollo de Aplicaciones Web | Informática </p>
+                    <p class="estudios_bach">Bachillerato | Ciencias Tecnológicas</p>
+                    <p class="estudios_eso">Educación Secundario Obligatoria | ESO</p>
                 </div>
             </div>
             <div class="tarjeta">
                 <div class="cabecera" onclick="toggleCard(3)">
-                    <h2>Tarjeta Desplegable 3</h2>
+                    <h2>Aficiones</h2>
                 </div>
                 <div class="contenido" id="contenido_3">
-                    <p>Esta es la información que se mostrará u ocultará.</p>
+                    <div class="gym">
+                        <img src="./img/aficiones/gimnasio.png" alt="gimnasio">
+                        <p>Gimnasio</p>
+                    </div>
+                    <div class="informática">
+                        <img src="./img/aficiones/informatica.png" alt="informatica">
+                        <p>Informática</p>
+                    </div>
+                    <div class="gym">
+                        <img src="./img/aficiones/balls-sports.png" alt="deportes">
+                        <p>Deportes</p>
+                    </div>
+                    <div class="gym">
+                        <img src="./img/aficiones/cine.png" alt="cine">
+                        <p>Cine</p>
+                    </div>
                 </div>
             </div>
         </section>
         
         
     </main>
+    <!--REDES SOCIALES-->
     <footer>
         <ul>
             <li>
-                <img src="img/linkedin.png" alt="linkedin">
+                <img src="img/rrss/linkedin.png" class="contacto-linkedin" alt="linkedin">
                 <a href="https://es.linkedin.com/?src=go-pa&trk=sem-ga_campid.18146679037_asid.140850334975_crid.619061882347_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.1005493&mcid=6968657504633266178&cid=&gclid=CjwKCAjwyNSoBhA9EiwA5aYlb5xI5y-lGwZ5rhqXeiIYa2iqFV_K2kYGduy8823Kk7vuffbSgffIvxoCT1IQAvD_BwE&gclsrc=aw.ds" title="Linkedin"></a>
             </li>
 
             <li>
-                <img src="img/phone-call.png" alt="telefono">
+                <img src="img/rrss/phone-call.png" class="contacto-telefono" alt="telefono">
                 <a href="" title="Telf"></a>
             </li>
 
             <li>
-                <img src="img/gmail.png" alt="gmail">
+                <img src="img/rrss/gmail.png" class="contacto-gmail" alt="gmail">
                 <a href="https://www.google.com/intl/es/gmail/about/" title="Correo"></a>
             </li>
 
             <li>    
-                <img src="img/twitter.png" alt="X (twitter)">
+                <img src="img/rrss/twitter.png" class="contacto-x" alt="X (twitter)">
                 <a href="https://twitter.com/?lang=es" title="X"></a>
             </li>
 
             <li>
-                <img src="img/Instagram_logo_2022.svg" alt="instagram">
+                <img src="img/rrss/Instagram_logo_2022.svg" class="contacto-instagram" alt="instagram">
                 <a href="https://www.instagram.com/" title="Instagram"></a>
             </li>
 
             <li>
-                <img src="img/github.png" alt="github">
+                <img src="img/rrss/github.png" class="contacto-github" alt="github">
                 <a href="https://github.com/" title="GitHub"></a>
             </li>
         </ul>

@@ -30,7 +30,6 @@ html {
 
 /*/////////////////////MAPA DE TAMAÑOS///////////////////////////////*/
 /*/////////////////////FUNCIONES///////////////////////////////*/
-/*MODO DEBUG - MAIN.scss*/
 .menu {
   display: inline-block; }
 
@@ -59,12 +58,13 @@ h1 {
   width: 5%;
   margin: 3%; }
 
+/*MODO DEBUG - MAIN.scss*/
 .p_obras {
   text-align: center;
   /*Funtion IF - DEBUG*/ }
   .p_obras img {
     width: 50%;
-    display: none; }
+    display: inline; }
 
 ul {
   background-color: var(--color-5);
@@ -78,8 +78,9 @@ li {
   display: inline-block; }
 
 footer {
-  width: 100%;
-  position: relative; }
+  width: 80%;
+  position: fixed;
+  bottom: 0px; }
 
 /*Estructuras - EACH*/
 .contacto-facebook {
