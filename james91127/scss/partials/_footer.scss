@@ -1,14 +1,23 @@
+
+
 footer{
     clear: both;
-    width: 100%;
-    height: 20%;
+    width: 80%;
+    height: 15%;
+    background-color: var(--color-5);
+    position: relative;
+    top: 60px;
+    left: 10%;
+    border-radius: 30px;
+    //ANIDAMIENTO
+    .iconos{
+        width: map-get($tamanio-iconos, "pequenio" );
+        height: 60%;
+        margin-left: 15.6%;
+        border-radius: 50%;
+    }
 }
 
-.abajo{
-    width: 5%;
-    height: 40%;
-    margin-left: 15.6%;
-    border-radius: 50%;
-    margin-top: 6%;
-    margin-bottom: 3%;
-}
+
+
+

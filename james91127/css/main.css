@@ -1,3 +1,25 @@
+:root .tema-claro {
+  --color-1: #D9B7D7;
+  --color-2: #dc8fdd;
+  --color-3: #392D3B;
+  --color-4: #B784B8;
+  --color-5: #C234BB;
+}
+:root .tema-oscuro {
+  --color-1: #313130;
+  --color-2: #B0B0AC;
+  --color-3: aliceblue;
+  --color-4: #5E5E5C;
+  --color-5: #3F4247;
+}
+
+body {
+  background-color: var(--color-1);
+  width: 100%;
+  height: auto;
+  padding-top: 5%;
+}
+
 input {
   opacity: 0;
   width: 0;
@@ -59,6 +81,11 @@ article {
   margin-top: 5%;
 }
 
+h2 {
+  text-align: center;
+  top: -10px;
+}
+
 h1 {
   width: 100%;
   position: relative;
@@ -82,29 +109,37 @@ img {
 
 footer {
   clear: both;
-  width: 100%;
-  height: 20%;
+  width: 80%;
+  height: 15%;
+  background-color: var(--color-5);
+  position: relative;
+  top: 60px;
+  left: 10%;
+  border-radius: 30px;
 }
-
-.abajo {
+footer .iconos {
   width: 5%;
-  height: 40%;
+  height: 60%;
   margin-left: 15.6%;
   border-radius: 50%;
-  margin-top: 6%;
-  margin-bottom: 3%;
 }
 
 header {
   font-size: 50px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   color: var(--color-3);
-  background-color: var(--color-2);
+  background-color: var(--color-4);
   width: 70%;
   position: sticky;
   top: 0px;
   left: 15%;
   border-radius: 15px;
+}
+
+.switch-5 {
+  position: relative;
+  left: 40%;
+  top: -20px;
 }
 
 .foto {
@@ -115,24 +150,6 @@ header {
   margin-right: 12%;
   float: left;
   border-radius: 50%;
-}
-
-:root .tema-claro {
-  --color-1: #efefef;
-  --color-2: pink;
-  --color-3: black;
-}
-:root .tema-oscuro {
-  --color-1: rgb(10, 10, 10);
-  --color-2: darkgrey;
-  --color-3: aliceblue;
-}
-
-body {
-  background-color: var(--color-1);
-  width: 100%;
-  height: auto;
-  padding-top: 5%;
 }
 
 /*# sourceMappingURL=main.css.map */
