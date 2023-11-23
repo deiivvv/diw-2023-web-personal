@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*
+Web personal de Victor Rey Sanz
+*/
 :root .tema-claro {
   --color-1: #CDFFBB;
   --color-2: #00FFD1;
@@ -13,6 +16,14 @@
   --color-3: #008170;
   --color-4: rgba(185, 180, 199, 0.4);
   --color-5: #fff;
+}
+
+.paginaEnCurso {
+  display: none;
+  position: relative;
+  left: 25%;
+  width: 50vw;
+  height: 50vw;
 }
 
 html {
@@ -35,26 +46,19 @@ header {
   text-align: center;
   padding: 15px;
 }
-
-#idInicio {
+header #idInicio {
+  color: var(--color-5);
+  font-family: Arial;
   display: inline-block;
-  width: 33%;
+  width: 40%;
   text-align: left;
-  color: var(--color-5);
 }
-
-#idMiCV {
-  display: inline-block;
-  width: 33%;
-  text-align: center;
+header #idSobreMi {
   color: var(--color-5);
-}
-
-#idSobreMi {
+  font-family: Arial;
   display: inline-block;
-  width: 30%;
+  width: 50%;
   text-align: right;
-  color: var(--color-5);
 }
 
 .switch-5 {
@@ -63,8 +67,7 @@ header {
   width: 50px;
   height: 30px;
 }
-
-.slider-5 {
+.switch-5 .slider-5 {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -76,8 +79,7 @@ header {
   background-color: var(--color-1);
   border: 1px solid black;
 }
-
-.slider-5:before {
+.switch-5 .slider-5:before {
   font-family: "Font Awesome 5 Free";
   content: "🔆";
   position: absolute;
@@ -86,13 +88,11 @@ header {
   font-size: 20px;
   transition: 0.3s ease all;
 }
-
-input:checked + .slider-5:before {
+input:checked + .switch-5 .slider-5:before {
   transform: translate(20px) rotate(360deg);
   content: "🌙";
 }
-
-input:checked + .slider-5 {
+input:checked + .switch-5 .slider-5 {
   background-color: #4e4e4e;
   left: 0px;
 }
@@ -107,11 +107,12 @@ input:checked + .slider-5 {
 }
 
 #idNombre {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   top: 35%;
   left: 25%;
   font-size: 50px;
-  color: var(--color-5);
 }
 
 #idImg {
@@ -149,37 +150,41 @@ input:checked + .slider-5 {
 }
 
 #idSobreMiTexto {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   top: 5%;
   left: 43%;
   font-size: 40px;
-  color: var(--color-5);
 }
 
 #idDescripcion {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   top: 15%;
   left: 39%;
-  color: var(--color-5);
 }
 
 /* Datos personales */
 #idDatosPersonales-container {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   top: 30%;
   left: 37%;
   height: 20%;
   width: 25%;
   text-align: center;
-  color: var(--color-5);
 }
 
 /* Nacimiento */
 #idNacimiento {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   top: 2%;
   left: 5%;
-  color: var(--color-5);
 }
 
 #idLineaNacimiento {
@@ -192,18 +197,20 @@ input:checked + .slider-5 {
 }
 
 #idNacimientoTexto {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   top: 2%;
   right: 5%;
-  color: var(--color-5);
 }
 
 /* Residencia */
 #idResidencia {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   top: 40%;
   left: 5%;
-  color: var(--color-5);
 }
 
 #idLineaResidencia {
@@ -216,18 +223,20 @@ input:checked + .slider-5 {
 }
 
 #idResidenciaTexto {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   top: 40%;
   right: 5%;
-  color: var(--color-5);
 }
 
 /* Procedencia */
 #idProcedencia {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   bottom: 2%;
   left: 5%;
-  color: var(--color-5);
 }
 
 #idLineaProcedencia {
@@ -240,10 +249,11 @@ input:checked + .slider-5 {
 }
 
 #idProcedenciaTexto {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   bottom: 2%;
   right: 5%;
-  color: var(--color-5);
 }
 
 /* Formacion */
@@ -267,10 +277,11 @@ input:checked + .slider-5 {
 }
 
 #idFormacionTexto {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   top: 0%;
   left: 4%;
-  color: var(--color-5);
 }
 
 #idScroll {
@@ -283,13 +294,14 @@ input:checked + .slider-5 {
 }
 
 #idContenedorF {
+  color: var(--color-5);
+  font-family: Arial;
   background-color: var(--color-3);
   position: relative;
   left: 10%;
   height: 40%;
   width: 80%;
   text-align: center;
-  color: var(--color-5);
 }
 
 /* Aficiones */
@@ -313,13 +325,16 @@ input:checked + .slider-5 {
 }
 
 #idAficionesTexto {
+  color: var(--color-5);
+  font-family: Arial;
   position: absolute;
   top: 0%;
   left: 4%;
-  color: var(--color-5);
 }
 
 #idContenedorA {
+  color: var(--color-5);
+  font-family: Arial;
   background-color: var(--color-3);
   position: relative;
   left: 10%;
@@ -327,7 +342,6 @@ input:checked + .slider-5 {
   width: 55%;
   text-align: center;
   padding-top: 3%;
-  color: var(--color-5);
 }
 
 .imgAficiones {
@@ -346,6 +360,7 @@ footer {
   text-align: center;
 }
 
+/* Redes sociales */
 .redesSociales {
   height: 32px;
   width: 32px;
@@ -395,6 +410,8 @@ footer {
 
 /* Ventanas */
 .ventana {
+  color: var(--color-5);
+  font-family: Arial;
   display: none;
   position: fixed;
   top: 50%;
