@@ -1,88 +1,312 @@
-body{
-    background-color: var(--color-2);
+// Creamos un mixin llamado titulo en el que le pasamos unas variables y gracias a este mixin podemos agrupar el color del titulo, el tamaño y donde tiene
+//que estar situado.
+
+@mixin titulo($color, $tam) {
+    color: $color;
+    font-size: $tam;
+    text-align: center;
 }
-#idCaja1{
+//creamos una funcion llamada porcentaje,en el que tendremos un porcentaje base y le podremos ir sumando dependiendo del lenguaje
+@function porcentaje($numsuma) {
+    @return percentage((calc((15 + $numsuma) / 100)));
+}
+//Creamos un mixin, que nos sirve para poder agrupar propiedades que vamos a usar para varios porcentajes
+//en el apartado de Skills. 
+@mixin porcentajeN($num) {
+    height: 15px;
+    background-color: var(--color-3);
+    width: porcentaje($num);
+}
+//Creamos un mixin para las fotos,agrupa propiedades como;width,height y border
+@mixin fotos ($color) {
+    width: 250px;
+    height: 150px;
+    border: 2px solid $color;
+}
+// En la regla del body agregamos un margin 0 para que no haya espacios en todo el HTML
+//Agregamos tambien la condicion del if(modo debug),que nos sirve para en caso de que la pag este en mantenimiento se
+//muestre la i
+body {
+    background-color: var(--color-1);
+    margin: 0%;
+
+    @if $debug ==true {
+        background-image: url(../Imagenes/error-404.jpg);
+        background-color: chartreuse;
+        z-index: 100;
+    }
+
+    @else {
+        background-image: none;
+        background-color: var(--color-1);
+    }
+}
+
+.titulos1 {
+    @include titulo(var(--color-3), 40px)
+}
+
+.titulos2 {
+    @include titulo(var(--color-5), 18px)
+}
+
+//Agregamos propiedades a la primera caja, no es el menu
+//Position relative para poder moverlo
+.cajaPrimera {
+    margin-top: 10px;
+    margin-bottom: 10px;
     position: relative;
-    top: 50%;
+    top: 0%;
     height: 300px;
     background-color: var(--color-4);
-}
 
-.FotoPerfil{
-    width: 200px;
-    height: 200px;
-    border-radius: 300px;
-    border: 4px solid var(--color-1);
-}
+    .cajaInformacion {  //Esta es la caja donde estan escrita la frase y la posicionamos con position absoluta
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        right: 52%;
+    }
 
-#idCajaFoto{
+    .cajaFoto {     //Div donde guardaremos la imagen de perfil y la posicionaremos con position absolute
+        position: absolute;
+        top: 20%;
+        left: 56%;
+
+        .FotoPerfil {       //propiedades de la imagen que agregamos
+            width: 200px;
+            height: 200px;
+            border-radius: 300px;
+            border: 4px solid var(--color-1);
+        }
+    }
+}
+//Son reglas y propiedades del boton de light/dark mode
+.theme-switch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 9em;
+    height: 2.5em;
+    font-size: 20px;
+    font-family: Montserrat;
+    font-weight: 600;
+    color: black;
+    background-color: white;
+    padding: 0.5em;
+    border: 1px solid black;
+    box-shadow: 6px 6px 0px black;
+    transition: .4s;
+    z-index: 1;
+  }
+  
+  .name::before {
+    color: black;
+    content: "Dark Mode";
+    margin-right: 2em;
+    transition: .2s ease-in-out;
+  }
+  
+  .name::after {
+    color: black;
+    content: "Light Mode";
+    margin-right: 1.7em;
+    transition: .2s ease-in-out;
+    display: none;
+  }
+  
+  .theme-switch .slider {
     position: absolute;
-    top: 20%;
-    left: 56%;
-}
-
-#idInformacion{
-    text-align: center;
+    background-color: #222;
+    margin-left: 6.2em;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 4px solid #222;
+    transform: rotate(-120deg);
+    box-shadow: inset 0px 6px #999, inset 0px 6px 1px 1px #999;
+    -moz-box-shadow: inset 0px 6px #999, inset 0px 6px 1px 1px #999;
+  }
+  
+  .theme-switch:hover {
+    color: white;
+    cursor: pointer;
+    box-shadow: none;
+    transform: translateX(6px) translateY(6px);
+    background-color: black;
+    border: none;
+  }
+  
+  .theme-switch:hover .name::before {
+    color: white;
+  }
+  
+  .theme-switch:hover .name::after {
+    color: white;
+  }
+  
+  .theme-switch input[type=checkbox]:checked + .slider {
+    transform: rotate(360deg);
+    box-shadow: none;
+    border: 4px solid #F28C38;
+    background-color: #F28C38;
+  }
+  
+  .theme-switch input[type=checkbox]:checked ~ .name::before {
+    display: none;
+  }
+  
+  .theme-switch input[type=checkbox]:checked ~ .name::after {
+    display: block;
+  }
+  
+  .theme-switch input[type=checkbox] {
     position: absolute;
-    top: 30%;
-    right: 52%;
+    visibility: hidden;
+  }
+  
+  .slider {
+    transition: 300ms ease;
+  }
 
-}
-.fotosAf{
-    width: 250px;
-    height: 150px;
-    border: 2px solid var(--color-1);
-    margin: 20px;
-}
-.fotosAf2{
-    width: 250px;
-    height: 150px;
-    border: 2px solid var(--color-5);
-    margin: 20px;
-}
-.cajaInfo{
-    margin-top: 20px;
+//Esta caja es la caja que esta por debajo de la primera y que contiene las cajas de F.Academica y Skills
+.cajaInfo {
+    margin-top: 40px;
     margin-bottom: 20px;
+    height: 415px;
 }
-.cajaForma{
+//Esta es la caja de Formacion Academica
+.cajaForma {
     background-color: var(--color-4);
-    border: 3px solid var(--color-5);
-    height: 350px;
+    border-radius: 35px;
+    height: 415px;
     float: left;
-    width: 50%;
+    width: 48%;
+    padding: 20px;
     margin-left: 2%;
     margin-right: 2%;
+
+    //Estan son las cajas donde estan almacenados cada instituto/colegio
+    //Posicionado con FLOAT
+    .cajaF {
+        float: left;
+        text-align: justify;
+        height: 140px;
+        padding: 15px;
+        width: 50%;
+    }
+}
+//creacion de un array que nos servira para poder crear de una forma mas limpiar las clases de los iconos
+$formacion : instituto anima ciencia programador;
+
+//recorremos el array con each y vamos agregando el nombre de la clase y sus propiedads que va a tener cada uno
+//dependiendo de la posicion del array.
+@each $f in $formacion{
+    .imgIcono-#{$f}{
+        height: 60px;
+        width: 80px;
+        background-image: url(../Imagenes/IconosFP/#{$f}.png); //Importante vamos tambien iterando el nombre de las imagenes gracias a que se llaman igual que el array que hemos declarado antes
+        background-position: center;
+        background-size: 80px 70px;
+        position: relative;
+        left: 93px;
+        top: 15px;
+    }
 }
 
-.cajaF{
-    float: left;
-    height: 140px;
-    padding: 15px;
-    width: 50%;
-}
-.cajaSkills{
+//creacion de la clase para la caja de skills
+.cajaSkills {
     background-color: var(--color-4);
-    border: 3px solid var(--color-5);
-    height: 350px;
-    width:45%;
+    border-radius: 35px;
+    height: 415px;
+    width: 45%;
     float: left;
+    padding: 20px;
+    margin-right: 2%;
+
+    //Caja donde estan texto + porcentajes
+    .cajaLetrasSkills {
+        text-align: left;
+        width: 70%;
+        padding-left: 15%;
+
+        //Caja de las letras de los porcentajes
+        .letra-pr {
+            height: 15px;
+            margin-left: 5px;
+        }
+    }
 }
 
-.titulos1{
-    color:var(--color-1);
-    font-size: 30px;
-    text-shadow: var(--color-5);
-}
-.titulos2{
-    color: var(--color-5);
-    font-size: 18px;
-    text-align: center;
-}
-.titulos3{
-    text-align: center;
+//Cajas de la barra de porcentajes,dependiendo del numero que se le ponga al mixin
+.porcentaje-Java {
+    @include porcentajeN(20);
 }
 
-.cajaAficiones{
+.porcentaje-JS {
+    @include porcentajeN(30);
+}
+
+.porcentaje-Mysql {
+    @include porcentajeN(20);
+}
+
+.porcentaje-Git {
+    @include porcentajeN(40);
+}
+
+.porcentaje-Bash {
+    @include porcentajeN(5);
+}
+
+//Creacion del Array para poder recorrerlo y utilizarlo
+$lenguajes : Java JS Mysql Git Bash;
+
+//Each para recorrer el array mencionado que nos sirve para poder simplificar y ahorrar espacio y codigo
+//Todas las clases tienen las mismas propiedades
+@each $leng in $lenguajes {
+    .letras-pr-#{$leng} {
+        display: inline-block;
+        margin-top: 17px;
+        margin-bottom: 17px;
+        width: 20%;
+    }
+
+    .caja-porcentaje-pr-#{$leng} {
+        border-bottom: 2px solid black;
+        display: inline-block;
+        height: 15px;
+        width: 60%;
+        margin-left: 5px;
+    }
+}
+
+//Clase con la caja que contiene Aficiones
+.cajaAficiones {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+    //Clase de la caja con el Titulo de la Caja de Aficiones
+    .cajaTitulo {
+        border-bottom: 4px solid var(--color-3);
+        padding-top: 10px;
+    }
+
+    //Clase de las imaganes
+    .imagenes {
+        padding-top: 60px;
+    }
+
+}
+//para las clases de las cajas de las fotos les pasaos el mixin de fotos y cada uno con un color distinto
+.fotosAf {
+    @include fotos(var(--color-1));
+}
+
+.fotosAf2 {
+    @include fotos(var(--color-5));
 }

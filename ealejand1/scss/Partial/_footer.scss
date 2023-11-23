@@ -1,16 +1,43 @@
-.boton {
+  //Clase de la caja footer
+  footer {
+    height: 300px;
+    margin-top: 10px;
+    padding-top: 50px;
+    text-align: center;
+    background-color: var(--color-3);
+    //clase de la caja donde esta el texto
+    .textoarroba {
+      padding: 0%;
+      font-size: 14px;
+      height: 100px;
+    }
+  }
+
+  //Hacemos un mapa con distintos (clave-valor) que nos van a servir para poder cambiar los tamanios de los botonos
+  $tam-boton-iconos: (
+    'peque': 25px,
+    'mediano': 50px,
+    'grande': 100px
+  );
+
+  //Mixin de botones para poder simplificar mas el codigo y que pegaremos en todas las clases de los botones
+  @mixin botones() {
     border-radius: 30px;
     margin-left: 10px;
+    height: map-get($tam-boton-iconos, mediano); //llamamos a los valores del mapa de tam-boton-iconos y dependiendo de su clave, pues asignara un valor o otro
+    width: map-get($tam-boton-iconos, mediano);
   }
-  
-  .textoarroba {
-    padding: 0%;
-    font-size: 14px;
-    height: 100px;
-  }
-  
-  footer {
-    margin-top: 10px;
-    padding: 40px;
-    text-align: center;
+
+  //creamos un array con diferentes nombres de iconos
+  $iconos : email github instagram linkedin;
+
+  //hacemos un each para recorrer el array anterior y poder crear codigo gracias 
+  //a las iteraciones del each
+  @each $icono in $iconos {
+    .botonImag-#{$icono} {
+      @include botones();
+      background-image: url('../Imagenes/iconosRedes/#{$icono}.png'); //en la carpeta de imagenes tienen los mismo nombres que las variables del array anterior creado
+      background-size: 48px 43px;
+      background-position: center;
+    }
   }

@@ -1,16 +1,34 @@
-.menu{
+//clase de la caja de menu
+.menu {
     background-color: var(--color-3);
-    height: 50px;
+    height: 60px;
     text-align: center;
     position: sticky;
     top: 0px;
     z-index: 10;
-}
-.cajas {
-    position: relative;
-    left: 30%;
-    display: inline-block;
-    width: 10%;
-    margin-top: 15px;
-    border-left:3px solid var(--color-5);
+//clase de nav
+    nav {
+        position: relative;
+        top: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        height: 50px;
+        //clase de las cajas de los textos del mneu(inicio,autor,sobre mi)
+        .cajas {
+            position: relative;
+            color: var(--color-2);
+            left: 30%;
+            top: 0px;
+            display: inline-block;
+            width: 10%;
+            border-left: 3px solid var(--color-5);
+        }
+    }
+//clase de la caja que contiene el nombre que esta situado en el nav
+    .titulo {
+        position: relative;
+        display: inline-block;
+        right: 26%;
+        width: 150px;
+    }
 }

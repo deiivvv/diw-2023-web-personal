@@ -2,30 +2,40 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  $color1-claro: #65B2FA; //fondo
+  $color2-claro: #ffffff; //colores basicos
+  $color3-claro: #578CF5; // menu y algunos titulos y footer
+  $color4-claro: #A9D3F5; //cajas
+  $color5-claro: #000; //colores basicos
 
-$color1-claro: #ff0000;
-$color2-claro: #faf3eb;
-$color3-claro: #deb887;
-$color4-claro: #F4E0B9;
-$color5-claro: #000;
-
+  $colores-claros: (
+    #65B2FA,
+    #ffffff,
+    #578CF5,
+    #A9D3F5,
+    #000000,
+);
 $colores-oscuros: (
-    #040D12,
-    #183D3D,
-    #5C8374,
-    #93B1A6,
-    #b4b4b4,
+    #0354a0,
+    #ffffff,
+    #0342be,
+    #3c90d4,
+    #000000,
 );
 
+$debug:false;
 
-
+//nos sirve para poder en el JS(por el evento) cambiar las clases y asi conseguir los diferentes temas(ligth/dark)
 :root {
     .tema-claro{
-        --color-1:  #{$color1-claro};
-        --color-2:  #{$color2-claro};
-        --color-3:  #{$color3-claro};
-        --color-4:  #{$color4-claro};
-        --color-5:  #{$color5-claro};
+        --color-1:  #{nth($colores-claros,1)}; //declaramos los colores
+        --color-2:  #{nth($colores-claros,2)};
+        --color-3:  #{nth($colores-claros,3)};
+        --color-4:  #{nth($colores-claros,4)};
+        --color-5:  #{nth($colores-claros,5)};
 
     }
     .tema-oscuro{
@@ -37,7 +47,7 @@ $colores-oscuros: (
     }
 }
 
-
+//esto nos sirve para poder importar los scss al main(que este es el que vamos a compilar)
 @import './Partial/menu';
 @import './Partial/body';
 @import './Partial/footer';
