@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <link rel="stylesheet" href="./css/miWeb.css">
+        <link rel="stylesheet" href="./css/estilos.css">
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -12,7 +12,8 @@
         <script src="./js/javascript.js" defer></script>
     </head>
 
-    <body class="tema-claro">
+    <!-- clase para el tema e id para el enlace -->
+    <body class="tema-claro" id="inicio">
         <header>
             <!--<div class="foto"></div>-->
             <!-- <img src="fotoheader2.png" class="foto"> -->
@@ -23,16 +24,15 @@
                 <h2>Programadora Web</h2>
                 <h2>Agente de Viajes</h2>
                 <h2>Organizadora de Eventos</h2>
-            </div>
-            
+            </div>           
         </header>
 
         <nav class="menu">
-			<a>INICIO</a>
-			<a>EXPERIENCIA</a>
-			<a>FORMACIÓN</a>
-            <a>AFICIONES</a>
-            <a>CONTACTO</a>
+			<a href="#inicio">INICIO</a>
+			<a href="#experiencia">EXPERIENCIA</a>
+			<a href="#formacion">FORMACIÓN</a>
+            <a href="#aficiones">AFICIONES</a>
+            <a href="#contacto">CONTACTO</a>
             <label class="switch-5">
                 <input type="checkbox" name="modo" id="toggleTheme" />
                 <span class="slider-5"></span>
@@ -40,21 +40,100 @@
 		</nav>
 
         <main>
+            <p id="idfondo"></p>
+            <p class="en-construccion">
+              <img src="./fotos/web-en-construccion.jpg"></img>
+            </p>  
             <article class="inicio">
                 <!-- <img src="fotoinicio.png" alt=""> -->
-                <h3 class="h3izq">¡ Hola soy Arancha !<br/>Esta es mi web.</h3>
+                <div class="h3izq">
+                    <h3>NOMBRE: Arancha Chicharro. <br>FECHA NAC.: 20/10/1991
+                    <br>RESIDENCIA: Madrid, ESPAÑA. <br> NACIONALIDAD: Española </h3>
+                </div>
                 <img src="fotos/foto1.png" alt="">
-                <h3 class="h3der">Tengo 31 años y <br/>vengo de Vallecas, Madrid.</h3>
+                <div class="h3der">
+                    <h3>SKILLS</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Java</li>
+                        <li>PHP</li>
+                        <li>MySQL</li> 
+                    </ul>
+                </div>
+
+                <!-- elemento para el enlace -->
+                <span id="experiencia"></span>
             </article>
 
             <article>
 
-                <section class="experiencia">
+                <section class="experiencia" >
                     <h2>EXPERIENCIA</h2>
+                    <div class="expe expe1">
+                        <div class="fechaExpe">May. 2015- Jun. 2022:</div>
+                        <p><b> Agente de viajes / Organizadora de eventos para empresas. Polvani Tours.</b>
+                            Viajes y turismo internacional. Madrid.<br> 
+                            Agente de ventas/reservas en departamento empresas, eventos y vacacional.</p>
+                    </div>
+            
+                    <div class="expe expe2">
+                        <div class="fechaExpe">Feb. 2015- May. 2015:</div>
+                        <p><b> Operadora / Teleoperadora. Unísono Soluciones de Negocio:</b>Campaña Iberdrola Distribución. Madrid.<br>  
+                            Atención al cliente: atención y resolución de averías e incidencias, reclamaciones y quejas.</p>
+                    </div>
+
+                    <div class="expe expe3">
+                        <div class="fechaExpe">Abr. 2012- Jun. 2012:</div>
+                        <p><b>Formación Técnico Superior en Agencias de Viajes y Gestión de Eventos American Express Barceló Viajes.</b> Madrid.  <br>
+                            Agencia Implant en AIRBUS EADS - CASA, base aérea de Getafe, Madrid. Formación en Centros de Trabajo (FCT)</p>
+                    </div>
+
+                    <div class="expe expe4">
+                        <div class="fechaExpe">Dic. 2008- Dic. 2009:</div>
+                        <p><b> Auxiliar administrativa / Recepcionista. Coyser S.A. Comunicaciones de empresa. </b> Madrid. <br>
+                            Administración y asistencia telefónica y personal en los departamentos de: 
+                            Servicio técnico (SAT), Administración y contabilidad, Recepción.</p>
+                    </div> <span id="formacion"></span>                 
                 </section>
 
                 <section class="formacion">
-                    <h2>FORMACIÓN</h2>
+                    <h2>FORMACIÓN</h2> 
+                   
+                        <div class="punto punto-1"></div>
+                        <div class="punto punto-2"></div>
+                        <div class="punto punto-3"></div>
+                        <div class="punto punto-4"></div>
+                        <div class="punto punto-5"></div>
+                    
+                    <div class="item item-1">
+                        <div class="fecha-formacion">2008</div>
+                        <p>CFGM <br> Gestión <br> Administrativa</p>
+                    </div>
+
+                    <div class="item item-2">
+                        <p>CGFS <br>Agencias de Viajes y <br>Gestión de Eventos</p>
+                        <div class="fecha-formacion">2012</div>
+                    </div>
+
+                    <div class="item item-3">
+                        <div class="fecha-formacion">2013</div>
+                        <p>Agente de Reservas <br>AMADEUS</p>
+                    </div>
+
+                    <div class="item item-4">
+                        <p>Facturación de <br>pasajeros y embarque</p>
+                        <div class="fecha-formacion">2014</div>
+                    </div>
+
+                    <div class="item item-5">
+                        <div class="fecha-formacion">2024</div>
+                        <p>CFGS <br> Desarrollo <br>Aplicaciones Web</p>
+                    </div>
+
+                    <!-- elemento para el enlace -->
+                    <span id="aficiones"></span>
                 </section>
 
                 <section class="aficiones">
@@ -74,29 +153,51 @@
                         <img src="iconosBody/casa.png" alt="">
                         
                     </div>
+                    <span id="contacto"></span>
                 </section>
 
                 <section class="contacto">
                     <h2>CONTACTO</h2>
                     <form action="#">
                         <textarea name="campo" id="" cols="70" rows="9"></textarea>
-                        <input type="nombre" name="nombre" placeholder="Nombre" /><br/>
-                        <input type="email" name="email" placeholder="Correo electrónico" /><br/>
+                            <input type="text" name="nombre" placeholder="Nombre" class="input" required>
+                            <!-- <label class="user-label">Nombre</label> -->
+                            <input type="email" name="email" placeholder="Correo electrónico" class="input" required>
+                            <!-- <label class="user-label">Correo electrónico</label> -->
                         <input type="submit" name="enviar" value="Enviar" />
                         <img src="iconosBody/contact.png" alt="">
                     </form>
-                </section> 
+                </section>
+                <!-- <section class="contacto">
+                    <h2>CONTACTO</h2>
+                    <form action="#">
+                        <textarea name="campo" id="" cols="70" rows="9"></textarea>
+                            <input type="nombre" name="nombre" placeholder="Nombre" /><br/>
+
+                            <input type="email" name="email" placeholder="Correo electrónico" /><br/>
+                            <input type="submit" name="enviar" value="Enviar" />
+                        <img src="iconosBody/contact.png" alt="">
+                    </form>
+                </section>  -->
 
             </article>
         </main>
 
         <footer>
-            <img src="iconosFooter/brand-linkedin.svg">
+            <div class="redes">
+                <div class="icono-linkedin"> </div>
+                <div class="icono-git"> </div>
+                <div class="icono-gmail"> </div>      
+                <div class="icono-twitter"> </div>  
+                <div class="icono-facebook"> </div>      
+                <div class="icono-instagram"> </div>             
+            </div>  
+            <!-- <img src="iconosFooter/brand-linkedin.svg">
             <img src="iconosFooter/brand-github-filled.svg">
             <img src="iconosFooter/brand-gmail.svg">
             <img src="iconosFooter/brand-x.svg">
             <img src="iconosFooter/brand-facebook-filled.svg">
-            <img src="iconosFooter/brand-instagram.svg">
+            <img src="iconosFooter/brand-instagram.svg"> -->
         </footer>
 
         

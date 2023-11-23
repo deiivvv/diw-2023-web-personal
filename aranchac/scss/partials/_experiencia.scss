@@ -1,0 +1,28 @@
+/* ****** EXPERIENCIA ****** */
+
+.experiencia {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    ;
+}
+
+.expe {
+    border-top: 5px double var(--color-7);
+    margin: 0 45px;
+    padding: 0 70px;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.expe1 {
+    border-top: 0px solid #000;
+}
+
+.fechaExpe {
+    padding-right: 40px;
+}
