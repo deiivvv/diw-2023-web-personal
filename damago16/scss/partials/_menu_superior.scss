@@ -1,0 +1,41 @@
+// Mixin para estilos comunes de "h1" y "nav"
+@mixin estilos-comunes-h1-nav {
+  display: inline-block;
+  width: 80%;
+  left: 50%;
+  text-align: center;
+  font-size: 225%;
+}
+
+// Estilo para el menú superior
+header {
+  background-color: var(--color-4);
+  display: block;
+  height: 170px;
+  position: sticky;
+  top: 0;
+
+  // Estilo para la imagen del menú
+  img {
+    height: 90%;
+    width: 20%;
+    float: left;
+  }
+
+  // Estilos para los elementos "h1" y "nav" dentro del menú
+  h1 {
+    top: 1%;
+    @include estilos-comunes-h1-nav;
+  }
+
+  nav {
+    top: 3%;
+    @include estilos-comunes-h1-nav;
+  }
+
+  // Estilo para los enlaces "a" dentro del menú
+  a {
+    background-color: var(--color-4);
+    padding: 2%;
+  }
+}

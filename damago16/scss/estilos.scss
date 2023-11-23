@@ -1,64 +1,72 @@
-@import "partials/menu";
-@import "partials/footer";
-@import "partials/contenido";
-@import "partials/boton";
-
-$color-1-claro: #F8E8EE;
-$color-2-claro: #F2BED1;
-
-
-$colores-oscuros : (
-    rgb(142, 174, 255),
-    rgb(47, 93, 212),
-  
+// Definición de colores claros
+$color-1-claro: #081cf8;
+$color-2-claro: #6499E9;
+$color-3-claro: #9EDDFF;
+$color-4-claro: #357ABD;
+$color-5-claro: #A6F6FF;
+// Definición de colores oscuros en un array
+$colores-oscuros: (
+  #000000,
+  #183d29,
+  #33753b,
+  #006400,
+  #00813c,
 );
-
+// Definición de tamaños horizontales de iconos
+$tamanios-iconos-horizontal : (
+ 'pequenio':40px, 
+ 'medio':60px,
+ 'grande':100px
+);
+// Definición de tamaños verticales de iconos
+$tamanios-iconos-vertical : (
+ 'pequenio':40px, 
+ 'medio':60px,
+ 'grande':100px
+);
+// Variables de tema para root
 :root {
-  .tema-claro{
-  --color-1:  #{$color-1-claro};
-  --color-2:  #{$color-2-claro};
- 
+  .tema-claro {
+    --color-1:  #{$color-1-claro};
+    --color-2:  #{$color-2-claro};
+    --color-3:  #{$color-3-claro};
+    --color-4:  #{$color-4-claro};
+    --color-5:  #{$color-5-claro};
   }
-  .tema-oscuro{
-    --color-1:  #{nth($colores-oscuros,1)};
-    --color-2:  #{nth($colores-oscuros,2)};
+  .tema-oscuro {
+    --color-1:  #{nth($colores-oscuros, 1)};
+    --color-2:  #{nth($colores-oscuros, 2)};
+    --color-3:  #{nth($colores-oscuros, 3)};
+    --color-4:  #{nth($colores-oscuros, 4)};
+    --color-5:  #{nth($colores-oscuros, 5)};
   }
-} 
-
-
-
-
-/* Poner siempre */
+}
+// Estilo global para HTML
 html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 *,
 *:before,
 *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
-/* Poner siempre */
-
-
-body{
-  background-color: var(--color-1);
+/* MODO DEBUG*/
+// Ver IF, en el partial contenido.....
+$debug:false;
+//imports
+@import "partials/menu_superior";
+@import "partials/footer";
+@import "partials/contenido";
+@import "partials/boton";
+// Estilo global para el cuerpo de la página
+body {
+  font-family: 'Itim', cursive;
+  color: var(--color-1);
+  background-color: var(--color-2);
   padding: 3%;
+  height: 1200px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
