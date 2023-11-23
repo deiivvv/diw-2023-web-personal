@@ -13,9 +13,22 @@ html {
   margin: 0;
 }
 
-/*COLORES*/
+/*BODY*/
+body {
+  background-color: black;
+  height: auto;
+  position: relative;
+  width: 60%;
+  left: 20%;
+  right: 20%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/*FUNCIÓN espacio vertical*/
+/**** LISTAS modo claro/noche ****/
 /*variables colores claros*/
 /*array de colores*/
+/**** INTERPOLACIÓN ****/
 :root .tema-claro {
   --color-1: #FFFFFF;
   --color-2: #F5F3EE;
@@ -33,19 +46,12 @@ html {
   --color-6: #473b3b;
 }
 
-/*TAMANIOS*/
-/*BODY*/
-body {
-  background-color: black;
-  height: auto;
-  position: relative;
-  width: 60%;
-  left: 20%;
-  right: 20%;
-  font-family: "Courier New", Courier, monospace;
-}
-
-/***HEADER***/
+/**** MAPA ****/
+/**** DEBUG variable ****/
+/**** INTERPOLACIÓN variable ****/
+/**** MIXIN ****/
+/**** PARTIALS ****/
+/**** HEADER ****/
 header {
   background-color: var(--color-2);
   padding-top: 15px;
@@ -57,52 +63,46 @@ header {
   height: auto;
   width: auto;
   z-index: 10;
+  /**Menú**/
 }
-
-.contenedorLogo {
+header .contenedorLogo {
   display: inline-block;
   text-align: center;
-  width: 20%;
+  width: 208px;
   height: 30px;
   vertical-align: bottom;
   padding-top: 5px;
 }
-
-.contenedorLogo .imagenLogo {
-  max-width: 100%; /* Ajustar el ancho máximo de la imagen */
-  height: auto; /* Mantener la relación de aspecto */
+header .contenedorLogo .imagenLogo {
+  max-width: 100%; /*ajusta el ancho máximo de la imagen */
+  height: auto; /* y mantiene la relación de aspecto */
 }
-
-/**Menu**/
-nav {
+header nav {
   vertical-align: bottom;
   display: inline-block;
   width: 79%;
   text-align: right;
 }
-
-ul a {
+header nav ul a {
   color: var(--color-5);
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
 }
-
-a:hover {
+header nav ul a:hover {
   color: var(--color-4);
 }
-
-li {
-  display: inline; /* quita formato lista */
+header nav li {
+  display: inline;
   padding-left: 5%;
 }
-
-/***MAIN***/
-main {
-  height: auto;
+@media screen and (max-width: 768px) {
+  header nav li {
+    display: none;
+  }
 }
 
-/*PRESENTACION*/
+/*** PRESENTACIÓN ***/
 .presentacionContenedor {
   position: relative;
   background-color: var(--color-1);
@@ -112,7 +112,6 @@ main {
   padding-top: 5%;
   width: 100%;
 }
-
 .presentacionContenedor article {
   position: relative;
   display: inline-block;
@@ -120,38 +119,33 @@ main {
   width: 400px;
   margin: 2%;
 }
-
 .presentacionContenedor article .miFoto {
-  max-width: 100%; /* Ajustar el ancho máximo de la imagen */
-  height: auto; /* Mantener la relación de aspecto */
+  max-width: 100%;
+  height: auto;
   border-radius: 20px;
 }
-
 .presentacionContenedor article h1 {
-  margin: 0;
-  text-align: left;
+  font-family: "Courier New";
   font-size: 80px;
   line-height: 100%;
-  word-wrap: break-word; /* rompe h1 y hace salto linea y no desborda caja */
+  text-align: left;
   color: var(--color-5);
 }
-
-h2 {
-  color: grey;
-  text-align: left;
+.presentacionContenedor article h2 {
+  font-family: "Courier New";
   font-size: 50px;
-}
-
-.textoPresentacion {
   text-align: left;
-  font-size: 20px;
+  color: grey;
+}
+.presentacionContenedor article .textoPresentacion {
   padding-top: 4%;
-  padding-bottom: 4%;
+  padding-bottom: 10px;
+  font-family: "Courier New";
+  font-size: 20px;
+  text-align: left;
   color: var(--color-3);
 }
-
-/**Botón contacto**/
-button {
+.presentacionContenedor article button {
   position: relative;
   width: 80%;
   height: 40px;
@@ -162,70 +156,60 @@ button {
   font-weight: 800;
   color: var(--color-1);
   background-color: var(--color-4);
-  cursor: pointer; /*manita al pasar el cursor*/
+  cursor: pointer;
 }
-
-button:hover {
+.presentacionContenedor article button:hover {
   color: var(--color-4);
   background-color: var(--color-2);
   border: 3px solid var(--color-4);
 }
 
-/*FORMACION*/
+/*** FORMACIÓN ***/
 .formacionContenedor {
   position: relative;
   background-color: var(--color-2);
   text-align: center;
   min-height: 650px;
   overflow: hidden;
-  padding-top: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  width: 100%;
+  padding: 5%;
 }
-
 .formacionContenedor article {
   position: relative;
   float: left;
   top: 10%;
   height: 460px;
-  width: 300px; /* Ancho de cada elemento */
-  margin: 2%; /* Espacio entre los elementos */
+  width: 300px;
+  margin: 2%;
   background-color: var(--color-6);
   padding: 30px;
   border-radius: 30px;
 }
-
-.formacionContenedor article img {
-  width: 26%;
-}
-
-h4 {
-  font-size: 20px;
+.formacionContenedor article h4 {
   padding-top: 10px;
+  font-family: "Courier New";
+  font-size: 20px;
+  color: var(--color-5);
+}
+.formacionContenedor article .textoFormacion {
+  padding-top: 10px;
+  font-family: "Courier New";
+  font-size: 16px;
+  text-align: left;
   color: var(--color-5);
 }
 
-.textoFormacion {
-  text-align: left;
-  padding-top: 10px;
-  font-size: 16px;
-  /*hyphens: auto;  Activa la división de palabras en sílabas */
-}
-
-/*AFICIONES*/
+/**** AFICIONES ****/
 .aficionesContenedor {
   background-color: var(--color-1);
   text-align: center;
   min-height: 580px;
   padding-top: 5%;
+  padding-bottom: 10px;
   padding-left: 14%;
   padding-right: 14%;
-  padding-bottom: 5%;
   width: 100%;
   overflow: hidden;
 }
-
 .aficionesContenedor article {
   position: relative;
   display: inline-block;
@@ -234,48 +218,76 @@ h4 {
   margin: 4%;
   text-align: center;
 }
-
 .aficionesContenedor article img {
-  width: 100%;
+  width: 100px;
 }
-
 .aficionesContenedor p {
   padding-top: 5px;
   font-weight: bold;
+  font-family: "Courier New";
   font-size: 18px;
-}
-
-h3 {
-  font-size: 30px;
-  position: relative;
-  top: 5%;
-  color: var(--color-3);
-}
-
-p {
+  text-align: center;
   color: var(--color-5);
 }
 
+h3 {
+  position: relative;
+  top: 5%;
+  font-family: "Courier New";
+  font-size: 30px;
+  color: var(--color-3);
+}
+
+/**** DEBUG ****/
 .imagenDebug {
-  width: 50%;
+  display: none;
+}
+
+.imagenDebug img {
+  width: 100%;
+}
+
+main {
   display: inline;
 }
 
-/*FOOTER*/
+/**** FOOTER ****/
 footer {
   width: 60%;
   position: fixed;
   bottom: 0;
   display: block;
-  height: 50px;
+  padding-bottom: 5px;
   background-color: var(--color-4);
   text-align: center;
 }
+footer a {
+  text-decoration: none;
+}
 
-footer img {
-  margin: 1%;
-  width: 2.5%; /* Ajustar el ancho máximo de la imagen */
-  height: auto; /* Mantener la relación de aspecto */
+/**** EACH ****/
+footer .icono-whatsapp {
+  width: 30px;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+footer .icono-linkedin {
+  width: 30px;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+footer .icono-github {
+  width: 30px;
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+footer .icono-email {
+  width: 30px;
+  padding-top: 10px;
+  padding-right: 5px;
 }
 
 input {
@@ -326,5 +338,8 @@ input:checked + .slider-5 {
   background-color: var(--color-6);
   left: 0px;
 }
+
+/**** EACH ****/
+/**** Anidamientos ****/
 
 /*# sourceMappingURL=estilos.css.map */
