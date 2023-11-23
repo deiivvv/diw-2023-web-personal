@@ -7,8 +7,7 @@
 <body class="tema-claro">
     <!-- menu -->
     <header>
-            <a id="idInicio" href="">INICIO</a>
-            <a id="idMiCV">MI CV</a>
+            <a id="idInicio">INICIO</a>
             <a id="idSobreMi">SOBRE MI</a>
             <label class="switch-5">
                 <input type="checkbox" id="toggleTheme" />
@@ -17,6 +16,7 @@
     </header>
      <main>
         
+        <img class="paginaEnCurso" src="imagenesPaginaPersonal/trabajoencurso.jpg" alt="pagina en curso">
         <!-- Inicio -->
         <div id="idInicio-container">
             <h1 id="idNombre">Victor Rey Sanz</h1>
@@ -29,7 +29,7 @@
         <!-- Sobre Mi -->
         <div id="idSobreMi-container">
             <h1 id="idSobreMiTexto">SOBRE MI</h1>
-            <p id="idDescripcion">DescripcionDescripcionDescripcionDescripcion<br>DescripcionDescripcionDescripcionDescripcion<br>DescripcionDescripcionDescripcion</p>
+            <p id="idDescripcion"><br>Actualmente estudiando un grado superior<br>de Desarrollo de Aplicaciones Web</p>
             
             <!-- Datos personales -->
             <div id="idDatosPersonales-container">
@@ -90,7 +90,7 @@
         <a id="idGitHub" href="https://github.com/VictorReySanz">    
             <img class="redesSociales" src="imagenesPaginaPersonal/github.png" alt="GitHub">
         </a>
-        <a id="idLinkedin" href="https://es.linkedin.com/">    
+        <a id="idLinkedin" href="https://www.linkedin.com/in/victor-rey-sanz-239056299/">    
             <img class="redesSociales" src="imagenesPaginaPersonal/linkedin.png" alt="Linkedin">
         </a>
         <a id="idGmail">    
@@ -125,28 +125,5 @@
         <p>vreysanz@gmail.com</p>
         <button onclick="cerrarVentanaGmail()">Cerrar</button>
     </div>
-
-    <script>
-        // Función para mostrar la ventana emergente
-        function mostrarVentanaContactos() {
-            document.getElementById("miVentanaContactos").style.display = "block";
-        }
-
-        function mostrarVentanaGmail() {
-            document.getElementById("miVentanaGmail").style.display = "block";
-        }
-
-        // Función para cerrar la ventana emergente
-        function cerrarVentanaContactos() {
-            document.getElementById("miVentanaContactos").style.display = "none";
-        }
-        function cerrarVentanaGmail() {
-            document.getElementById("miVentanaGmail").style.display = "none";
-        }
-
-        // Agregar un evento al enlace para mostrar la ventana emergente al hacer clic
-        document.getElementById("idContacto").addEventListener("click", mostrarVentanaContactos);
-        document.getElementById("idGmail").addEventListener("click", mostrarVentanaGmail);
-    </script>
 </body>
-</html> 
+</html>

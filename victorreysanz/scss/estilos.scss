@@ -1,0 +1,83 @@
+$autor : "Victor Rey Sanz";
+/*
+Web personal de #{$autor}
+*/
+
+//Paleta de colores para el tema claro y oscuro
+:root .tema-claro {
+  --color-1: #CDFFBB;
+  --color-2: #00FFD1;
+  --color-3: #A2FC82;
+  --color-4: rgba(0, 255, 209, 0.4);
+  --color-5: black;
+}
+
+.tema-oscuro {
+  --color-1: #352F44;
+  --color-2: #5C5470;
+  --color-3: #008170;
+  --color-4: rgba(185, 180, 199, 0.4);
+  --color-5: #fff;
+}
+
+//Mapa para los tamaños de las imagenes
+$tamanio-vertical: (
+  iconos: 32px,
+  foto: 350px,
+  datosGeneral: 15%,
+  datosFormacion: 40%,
+  datosAficion: 40%
+);
+
+$tamanio-horizontal: (
+  iconos: 32px,
+  foto: 350px,
+  datosGeneral: 25%,
+  datosFormacion: 80%,
+  datosAficion: 55%
+);
+
+//Modo debug
+$debug: false;
+
+@function calcular-tamano($porcentaje) {
+  @return $porcentaje * 1vw;
+}
+
+.paginaEnCurso {
+@if $debug {
+  }
+  @else {
+    display: none;
+  }
+  position: relative;
+  left: 25%;
+  width: calcular-tamano(50);
+  height: calcular-tamano(50);
+}
+
+//Mixin para el color y estilo de las letras
+@mixin estiloLetra {
+  color: var(--color-5);
+  font-family: Arial;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-1);
+  margin: 0;
+}
+
+/* Header */
+@import "partials/_menu.scss";
+
+/* main */
+@import "partials/contenido.scss";
+
+/* Footer */
+@import "partials/_footer.scss";
