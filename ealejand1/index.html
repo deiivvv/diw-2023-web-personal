@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Personal</title>
-    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/main.css" />
     <script src="./js/Boton.js"></script>
 </head>
+
 <body class="tema-claro">
     <header class="menu">
         <nav>
-            <input type="checkbox" onclick="cambiarTema()">
+            <div class="titulo">Erik Alejandro</div>
             <div class="cajas">
                 Inicio
             </div>
@@ -19,58 +21,120 @@
             <div class="cajas">
                 Sobre mi
             </div>
-            
+
         </nav>
     </header>
     <main>
-        <div id="idCaja1">
-            <div id="idInformacion">
-                <h2 class="titulos1">Erik Alejandro Quezada</h2>
-                <h8 class="titulos2">Estudiante DAW</h8>
-                <p class="textoColumna">hola buenas tardes</p>
+        <div class="cajaPrimera">
+            <div class="cajaNocheDia">
+                <label class="theme-switch" for="checkbox" id="themeswitch">
+                    <input type="checkbox" id="checkbox" onclick="cambiarTema()">
+                    <div class="slider round"></div>
+                    <span class="name"></span>
+                    <div class="back"></div>
+              </label>
             </div>
-            <div id="idCajaFoto">
+            <div class="cajaInformacion">
+                <h2 class="titulos1">Erik Alejandro Quezada</h2>
+                <h8 class="titulos2"><b>Estudiante DAW</b></h8>
+                <article>
+                    <p>Actualmente estudiando un Grado superior </br>de Desarrollo de Aplicaciones Web.</p>
+                </article>
+
+            </div>
+            <div class="cajaFoto">
                 <img src="./Imagenes/fotoPerf1.jpg" alt="fotoPerfil" class="FotoPerfil">
             </div>
         </div>
 
         <div class="cajaInfo">
-            <div class="cajaForma">
-                <h4 class="titulos2">Formacion Academica</h4>
-                <div class="cajaF">
-                    Colegio J.H.NEWMAN (ESO) 2013-2017
+            <article>
+                <div class="cajaForma">
+                    <h4 class="titulos2">Formacion Academica</h4>
+                    <section>
+                        <div class="cajaF">
+                            Colegio J.H.NEWMAN (ESO) 2013-2017
+                            <div class="imgIcono-instituto"></div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="cajaF">
+                            CampusFP Atocha (G.S Animacion 3D) 2019-2022
+                            <div class="imgIcono-anima"></div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="cajaF">
+                            I.E.S Francisco de Quevedo (Bachillerato Ciencias) 2017-2019
+                            <div class="imgIcono-ciencia"></div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="cajaF">
+                            I.E.S Franscisco de Goya(estudiante de G.S de D.A.W) 2023 - actual
+                            <div class="imgIcono-programador"></div>
+                        </div>
+                    </section>
                 </div>
-                <div class="cajaF">
-                    CampusFPAtocha (G.S Animacion 3D) 2019-2022
-                </div>
-                <div class="cajaF">
-                    I.E.S Francisco de Quevedo (Bachillerato Ciencias)2017-2019
-                </div>
-                <div class="cajaF">
-                    I.E.S Franscisco de Goya(estudiante de G.S de D.A.W)2023-actual 
-                </div>
-                </div>
-                <div class="cajaSkills">
-                    <h1>Skills</h1>
-            </div>
+            </article>
+            <article>
+                <section>
+                    <div class="cajaSkills">
+                        <h1 class="titulos2">Skills</h1>
+                        <div class="cajaLetrasSkills">
+
+                            <div class="letras-pr-Java">Java</div>
+                            <div class="caja-porcentaje-pr-Java">
+                                <div class="porcentaje-Java"></div>
+                            </div><span class="letra-pr">30%</span>
+
+                            <div class="letras-pr-JS">Javascript</div>
+                            <div class="caja-porcentaje-pr-JS">
+                                <div class="porcentaje-JS"></div>
+                            </div><span class="letra-pr">40%</span>
+
+                            <div class="letras-pr-Mysql">Mysql</div>
+                            <div class="caja-porcentaje-pr-Mysql">
+                                <div class="porcentaje-Mysql"></div>
+                            </div><span class="letra-pr">30%</span>
+
+                            <div class="letras-pr-Git">Git</div>
+                            <div class="caja-porcentaje-pr-Git">
+                                <div class="porcentaje-Git"></div>
+                            </div><span class="letra-pr">50%</span>
+
+                            <div class="letras-pr-Bash">Bash</div>
+                            <div class="caja-porcentaje-pr-Bash">
+                                <div class="porcentaje-Bash"></div>
+                            </div><span class="letra-pr">20%</span>
+                        </div>
+                    </div>
+                </section>
+            </article>
         </div>
-        
+
 
         <div class="cajaAficiones">
-            <h4 class="titulos2">Aficiones</h4>
-            <img src="./Imagenes/1aficion.jpg" alt="concierto" class="fotosAf">
-            <img src="./Imagenes/2aficion.jpg" alt="viendo series" class="fotosAf2">
-            <img src="./Imagenes/3aficion.jpeg" alt="amigos" class="fotosAf">
-            <img src="./Imagenes/4aficion.jpeg" alt="amigos" class="fotosAf2">
+            <div class="cajaTitulo">
+                <h4 class="titulos2">Aficiones</h4>
+            </div>
+            <div class="imagenes">
+                <img src="./Imagenes/1aficion.jpg" alt="concierto" class="fotosAf">
+                <img src="./Imagenes/2aficion.jpg" alt="viendo series" class="fotosAf2">
+                <img src="./Imagenes/3aficion.jpeg" alt="amigos" class="fotosAf">
+                <img src="./Imagenes/4aficion.jpeg" alt="amigos" class="fotosAf2">
+            </div>
         </div>
 
-        
+
     </main>
-    <footer >
-        <button class="boton" type="button"><img src="./Imagenes/3.png" alt="github_button" width="30px" height="30px"></button>
-        <button class="boton" type="button"><img src="./Imagenes/1.png" alt="gmail_button" width="30px" height="30px"></button>
-        <button class="boton" type="button"><img src="./Imagenes/2.jpg" alt="github_button" width="30px" height="30px"></button>
+    <footer>
+        <button class="botonImag-email" type="button"></button>
+        <button class="botonImag-github" type="button"></button>
+        <button class="botonImag-instagram" type="button"></button>
+        <button class="botonImag-linkedin" type="button"></button>
         <h6 class="textoarroba">@erikalejandro</h6>
     </footer>
 </body>
+
 </html>
