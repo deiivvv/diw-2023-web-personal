@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <!--SEO-->
+    <title>Rubén Arapiles - Desarrollador de Software y diseñador gráfico</title>
+    <meta name="description" content="Portfolio de Rubén Arapiles, desarrollador web front-end con Vue.js y diseñador gráfico"> <!--descripcion de google en las busquedas-->
+    <link rel="canonical" href="https://arapiles.dev"> <!--cual es la pagina principal de mi sitio-->
+    <meta name="robots" content="index, follow"> <!--le dice al robot de google que indexe y siga los enlaces-->
+    <link rel="icon" type="image/jpg" href="imagenes/logo2.png"> <!-- favicon, pone img en la pestaña del navegador -->
+
     <link rel="stylesheet" type="text/css" href="css/estilos.css" />
     <link
       rel="stylesheet"
@@ -14,15 +21,17 @@
     <script src="js/javascript.js" defer></script>
 </head>
 <body class="tema-claro">
+    
+    <!------------------- HEADER ------------------------>
     <header>
         <div class="contenedorLogo">
-            <img class="imagenLogo" src="imagenes/nuevoLogotipo_vector.svg" alt=""/>
+            <img class="imagenLogo" src="imagenes/nuevoLogotipo_vector.svg" alt="logotipo de arapiles.dev"/>
         </div>
         <nav>
             <ul>
-                <li><a href="paginapersonal.html">Portfolio</a></li>
+                <li><a href="index.html">Portfolio</a></li>
                 <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="mailto:arapilesr@gmail.com">Contacto</a></li>
                 <li>
                     <label class="switch-5">
                         <input type="checkbox" id="toggleTheme" />
@@ -33,19 +42,30 @@
         </nav>
     </header>
 
+    <!------------------- ------------------------>
+    <!-- DEBUG -->
+    <section class="imagenDebug">
+        <img src="imagenes/mantenimientoWeb.png">
+    </section>
+    <!------------------- ------------------------>
+
     <main>
+
+        <!------------------- PRESENTACIÓN ------------------------>
+
         <section class="presentacionContenedor">
             <article class="cajaPresentacion">
                 <h2>Hello!</h2>
                 <h1>I’m Rubén Arapiles</h1>
                 <p class="textoPresentacion">Desarrollador web apasionado y creativo. ¡Experiencias digitales excepcionales!</p>
-                <a href="#"><button>Contacto</button></a>
+                <a href="mailto:arapilesr@gmail.com"><button>Contacto</button></a>
             </article>
             <article class="cajaFotopersonal">
                 <img class="miFoto" src="imagenes/miFoto.jpg" alt="">
             </article>
         </section>
 
+        <!------------------- FORMACIÓN ------------------------>
         <section class="formacionContenedor">
             <h3>Formación</h3>
             <article class="formacion1">
@@ -70,15 +90,14 @@
                 <img src="imagenes/programacion2.svg" alt="icono programacion"/>
                 <h4>Desarrollo Web</h4>
                 <p class="textoFormacion">Programación frontend con Javascript vanilla y Vuejs. Programación backend con
-                    JAVA y Springboot. Y PHP con Laravel.
-                    
-                    </p>
+                    JAVA y Springboot. Y PHP con Laravel.</p>
                     <p class="textoFormacion">Diseño de interfaces con HTML, CSS, Saas y Bootstrap. Diseño responsive.</p>
-                        <p class="textoFormacion">BBDD SQL con MariaDB. Uso de metodología SCRUM y conocimiento de contenedores.</p>
+                    <p class="textoFormacion">BBDD SQL con MariaDB. Uso de metodología SCRUM y conocimiento de contenedores.</p>
             
             </article>
         </section>
 
+        <!------------------- AFICIONES ------------------------>
         <section class="aficionesContenedor">
             <h3>Aficiones</h3>
             <article class="aficion1">
@@ -114,23 +133,34 @@
                 <p>Sci-Fi</p>
             </article>
         </section>
-
+        <!-------------------   ------------------------>
     </main>
 
+    <!------------------- FOOTER ------------------------>
     <footer>
-        <img class="icono" src="imagenes/whatsapp.svg" alt="iconoWhatsapp"/>
-        <img class="icono" src="imagenes/linkedin.svg" alt="iconoLinkdIn"/>
-        <img class="icono" src="imagenes/github.svg" alt="iconoGithub"/>
-        <img class="icono" src="imagenes/email.svg" alt="iconoMail"/>
-
+        <a href="whatsapp://send?phone=+34635120619&text=Hola Rubén" target="_blank">
+        <img class="icono-whatsapp" src="imagenes/whatsapp.svg" alt="iconoWhatsapp"/>
+        </a>
+        <a href="https://www.linkedin.com/in/ruben-arapiles/" target="_blank">
+        <img class="icono-linkedin" src="imagenes/linkedin.svg" alt="iconoLinkdIn"/>
+        </a>
+        <a href="https://github.com/arapilesRuben/" target="_blank">
+        <img class="icono-github" src="imagenes/github.svg" alt="iconoGithub"/>
+        </a>
+        <a href="mailto:arapilesr@gmail.com" target="_blank">
+        <img class="icono-email" src="imagenes/email.svg" alt="iconoMail"/>
+        </a>
     </footer>
 
 </body>
 </html>
 
+
 <!--
-    TAREAS
-    -maquetar con background color esqueleto
-    -Montar enlaces
-    -Montar imagenes
+    PENDIENTE
+    -querys
+    -pagina blog
+    -formulario contacto
+    -optimizar img
+
 -->

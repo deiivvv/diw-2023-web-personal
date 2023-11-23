@@ -1,18 +1,44 @@
 
-/*FOOTER*/
+/**** FOOTER ****/
 footer{
     width: 60%;
     position: fixed;
     bottom: 0;
     display: block;
-    height: 50px;
+    padding-bottom: calcular-padding-bottom(5px, 1); //llamada a la función
     background-color: var(--color-4);
     text-align: center;  
+
+    a{
+        text-decoration: none;
+    }
 }
 
-footer img{
-    margin: 1%;
-    width: map-get($tamanios-iconos , 'pequenio'); /* Ajustar el ancho máximo de la imagen */
 
-    height: auto; /* Mantener la relación de aspecto */
+/**** EACH ****/
+//definir lista de iconos
+$lista-iconos:(
+    'whatsapp',
+    'linkedin',
+    'github',
+    'email'
+);
+
+// Establecer estilos comunes para todos los iconos
+$iconos-estilos: (
+    width: map-get($tamanios-iconos, 'pequenio'),
+    padding-top:10px,
+    padding-right:5px,
+    //height: auto,
+    
+);
+
+//aplica los estilos a cada icono usando @each
+@each $icon in $lista-iconos {
+    footer .icono-#{$icon} {
+        @each $propiedad, $valor in $iconos-estilos {
+            #{$propiedad}: $valor;
+        }
+
+    }
 }
