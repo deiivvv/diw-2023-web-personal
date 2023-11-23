@@ -1,16 +1,18 @@
+/*----------listas-------------*/
 :root .tema-claro {
-  --color-1: #ffffff;
-  --color-2: #DAFFFB;
-  --color-3: #64CCC5;
-  --color-4: #176B87;
+  --color-1: #000000;
+  --color-2: #CDF5FD;
+  --color-3: #A0E9FF;
+  --color-4: #00A9FF;
 }
 :root .tema-oscuro {
-  --color-1: #000000;
-  --color-2: #d6b1e7;
-  --color-3: #c118e2;
-  --color-4: #a343e4;
+  --color-1: #ffffff;
+  --color-2: #4E31AA;
+  --color-3: #3A1078;
+  --color-4: #13005A;
 }
 
+/*----------listas-------------*/
 /*----------mapas-------------*/
 /*----------mapas-------------*/
 /* ----------Poner siempre------------ */
@@ -28,6 +30,16 @@ html {
   box-sizing: inherit;
 }
 
+/*-----------FUNCION----------------*/
+/*-----------FUNCION----------------*/
+/*-----------FUNCION IF/DEBUG-------------*/
+.imagen-obra {
+  width: 30%;
+  display: none;
+}
+
+/*-----------FUNCION IF/DEBUG-------------*/
+/* ----------Poner siempre------------ */
 input {
   opacity: 0;
   width: 0;
@@ -76,96 +88,93 @@ input:checked + .slider-5 {
   left: 0px;
 }
 
-.foto {
+.header {
+  height: 150px;
+  background-color: var(--color-4);
+  position: sticky;
+  top: 0px;
+}
+.header .foto {
   float: left;
-  height: 250px;
+  height: 150px;
   border-radius: 50%;
 }
-
-.header {
-  height: 250px;
-  background-color: var(--color-4);
-}
-
-.nombre {
+.header .nombre {
   width: 84.66%;
   float: left;
   text-align: center;
-  font-size: 80px;
-  color: white;
+  font-size: 30px;
+  color: var(--color-1);
 }
-
-.menu {
-  position: sticky;
+.header .menu {
+  color: var(--color-2);
   display: inline-block;
-  top: 250px;
   width: 84.66%;
   text-align: center;
 }
-
-.inicio {
+.header .menu .inicio {
   font-size: 45px;
   float: left;
   margin-left: 25%;
-  color: white;
+  color: var(--color-1);
 }
-
-.sobremi {
+.header .menu .sobremi {
   font-size: 45px;
   float: right;
   margin-right: 25%;
-  color: white;
+  color: var(--color-1);
 }
 
 body {
   background-color: var(--color-3);
+  height: 1500px;
+}
+
+section {
+  margin: auto;
 }
 
 .formacion {
   background-color: var(--color-2);
+  color: var(--color-1);
   float: left;
   left: 5%;
   width: 44%;
   margin: 3%;
   margin-bottom: 0;
 }
-
-.h2formacion {
+.formacion .h2formacion {
   text-align: center;
   text-decoration-line: underline;
 }
 
 .datos-personales {
   background-color: var(--color-2);
+  color: var(--color-1);
   width: 44%;
   float: left;
   margin: 3%;
   margin-bottom: 0;
 }
-
-.h2datospersonales {
+.datos-personales .h2datospersonales {
   text-align: center;
   text-decoration-line: underline;
 }
 
 .mis-aficiones {
   width: 94%;
-  background-color: var(--color-2);
+  color: var(--color-1);
   float: left;
   margin: 3%;
 }
-
-.imgaficiones {
-  margin-left: 14%;
-}
-
-.h2misaficiones {
+.mis-aficiones .h2misaficiones {
   text-align: center;
   text-decoration-line: underline;
 }
-
-section {
-  margin: auto;
+.mis-aficiones .imgaficiones {
+  margin-left: 14%;
+  width: 150px;
+  height: 150px;
 }
 
 .footer {
@@ -177,15 +186,44 @@ section {
   margin-top: 5%;
   height: 150px;
 }
-
-.misredessociales {
+.footer .misredessociales {
   text-align: center;
-  color: white;
+  color: var(--color-1);
+}
+.footer a {
+  margin-left: 12%;
 }
 
-a {
-  margin-left: 12%;
-  color: white;
+.img-correo {
+  width: 75px;
+  height: 75px;
 }
+
+.img-github {
+  width: 75px;
+  height: 75px;
+}
+
+.img-linkedin {
+  width: 75px;
+  height: 75px;
+}
+
+.img-facebook {
+  width: 75px;
+  height: 75px;
+}
+
+.img-whatsapp {
+  width: 75px;
+  height: 75px;
+}
+
+.img-telefono {
+  width: 75px;
+  height: 75px;
+}
+
+/* ----------Poner siempre------------ */
 
 /*# sourceMappingURL=miPagina.css.map */

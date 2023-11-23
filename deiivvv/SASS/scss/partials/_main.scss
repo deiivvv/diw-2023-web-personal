@@ -1,0 +1,73 @@
+body{
+    background-color: var(--color-3);
+    height: 1500px;
+}
+section {
+    margin: auto;
+}
+
+
+// varibales para la interpolacion
+$text:text-align;
+$center:center;
+
+// creamos un mixin
+@mixin h2(){
+ // aqui va la interpolacion
+ #{$text}:#{$center};
+ text-decoration-line: underline;
+}
+
+.formacion {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    float: left;
+    left: 5%;
+    width: 44%;
+    margin: 3%;
+    margin-bottom: 0;
+    // aqui va la anidacion 
+    .h2formacion{
+        // aqui llamamos al mixin mediante un include
+       @include h2()
+    }
+}
+
+
+.datos-personales {
+    background-color: var(--color-2);
+    color: var(--color-1);
+    // aqui llamamos a la funcion ancho   
+    width: ancho(4.4,10);
+    float: left;
+    margin: 3%;
+    margin-bottom: 0;
+    // aqui va la anidacion
+    .h2datospersonales{
+        // aqui llamamos al mixin mediante un include
+        @include h2
+    }
+}
+
+.mis-aficiones{
+    // aqui llamamos a la funcion ancho
+    width: ancho(9.4,10);
+    color: var(--color-1);
+    float: left;
+    margin: 3%;
+    // aqui va la anidacion
+    .h2misaficiones{
+        // aqui llamamos al mixin mediante un include   
+       @include h2
+    }
+    .imgaficiones{
+        margin-left: 14%;
+        width: map-get($tamanios-iconos-horizontal, "grande");
+        height: map-get($tamanios-iconos-vertical, "grande");
+    }    
+}
+
+
+
+
+
